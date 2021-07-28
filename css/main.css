@@ -29,6 +29,14 @@ body {
   color: #fff;
 }
 
+.nav a i {
+  font-size: 36px;
+}
+
+.nav a span {
+  font-size: 12px;
+}
+
 .main {
   width: 80%;
   margin: 0 auto;
@@ -36,6 +44,7 @@ body {
 
 .main .title {
   font-weight: 700;
+  font-family: "Montserrat", sans-serif;
 }
 
 .main .title:hover {
