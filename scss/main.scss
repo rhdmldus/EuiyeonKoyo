@@ -1,0 +1,38 @@
+@import './resets';
+@import './variables';
+
+@function weight($weight-name) {
+    @return map-get($font-weight, $weight-name);
+}
+
+body {
+    background: $primary-color;
+    color:$text-color;
+}
+.nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:120px;
+    height: 100%;
+    background-color: $primary-color;
+    a{
+        display: inline-block;
+        text-decoration:none;
+        color:$text-color;
+    }
+    
+}
+.main {
+    width:80%;
+    margin: 0 auto;
+
+    .title {
+        font-weight: weight(bold);
+        &:hover{
+            color:pink;
+        }
+    }
+    
+
+}

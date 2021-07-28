@@ -1,0 +1,44 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: #272727;
+  color: #fff;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  background-color: #272727;
+}
+
+.nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main .title {
+  font-weight: 700;
+}
+
+.main .title:hover {
+  color: pink;
+}
+/*# sourceMappingURL=main.css.map */
