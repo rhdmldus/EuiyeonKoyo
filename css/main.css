@@ -10,31 +10,70 @@ li {
 }
 
 body {
-  background: #272727;
-  color: #fff;
+  background: #030e12;
+  color: #fcde67;
+}
+
+.hippo {
+  display: inline-block;
+  font-size: 36px;
+  text-align: center;
+  width: 130px;
+  height: 80px;
+  background: #5bccf6;
+  color: #fcde67;
+  line-height: 80px;
 }
 
 .nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: 100%;
-  background-color: #272727;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #030e12;
 }
 
-.nav a {
+.nav .item_list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav .item_list a {
+  position: relative;
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: #fcde67;
+  padding: 30px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.nav a i {
-  font-size: 36px;
+.nav .item_list a:hover {
+  color: #5bccf6;
 }
 
-.nav a span {
-  font-size: 12px;
+.nav .item_list a:hover i {
+  display: inline-block;
+}
+
+.nav .item_list a i {
+  font-size: 16px;
+  position: absolute;
+  display: none;
+  top: 57px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.nav .item_list a span {
+  font-size: 16px;
 }
 
 .main {
@@ -42,12 +81,16 @@ body {
   margin: 0 auto;
 }
 
-.main .title {
+.main section {
+  height: 100vh;
+}
+
+.main section .title {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
 
-.main .title:hover {
-  color: pink;
+.main section .title:hover {
+  color: #5bccf6;
 }
 /*# sourceMappingURL=main.css.map */

@@ -9,35 +9,63 @@ body {
     background: $primary-color;
     color:$text-color;
 }
+.hippo{
+    display:inline-block;
+    font-size: $font-large;
+    text-align: center;
+    width: 130px;
+    height:80px;
+    background:$accent-color;
+    color:$text-color;
+    line-height: 80px;
+}
 .nav{
-    position:absolute;
-    top:0;
-    left:0;
-    width:120px;
-    height: 100%;
+    display: flex;
+    // width:100%;
     background-color: $primary-color;
-    a{
-        display: inline-block;
-        text-decoration:none;
-        color:$text-color;
-        i{
-            font-size:$font-large;
+        .item_list{
+            width:100%;
+            display:flex;
+            justify-content: center;
+            a{  position:relative;
+                display: inline-block;
+                // width:100%;
+                text-decoration:none;
+                color:$text-color;
+                padding:$padding-large;
+                text-align: center;
+                text-transform: uppercase;
+                transition:.5s;
+                &:hover{
+                    color:$accent-color;
+                    i{
+                        display: inline-block;
+                    }
+                }
+                i{
+                    font-size:$font-small;
+                    position:absolute;
+                    display:none;
+                    top:57px;left:50%;transform:translateX(-50%);
+                }
+                span{
+                    font-size:$font-small;
+                }
+            }
         }
-        span{
-            font-size:$font-small;
-        }
-    }
     
 }
 .main {
     width:80%;
     margin: 0 auto;
-
-    .title {
-        font-weight: weight(bold);
-        font-family: map-get($font-family, 'montserrat' );
-        &:hover{
-            color:pink;
+    section{
+        height:100vh;
+        .title {
+            font-weight: weight(bold);
+            font-family: map-get($font-family, 'montserrat' );
+            &:hover{
+                color:$accent-color;
+            }
         }
     }
     
