@@ -9,6 +9,10 @@ li {
   list-style: none;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background: #030e12;
   color: #fcde67;
@@ -29,6 +33,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,7 +51,7 @@ body {
           justify-content: center;
 }
 
-.nav .item_list a {
+.nav .item_list .link {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -58,20 +63,33 @@ body {
   transition: all .5s;
 }
 
-.nav .item_list a:hover {
+.nav .item_list .link.on {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
   color: #5bccf6;
 }
 
-.nav .item_list a:hover i {
+.nav .item_list .link.on i {
   opacity: 1;
   -webkit-transition: all .5s;
   transition: all .5s;
   top: 10px;
 }
 
-.nav .item_list a i {
+.nav .item_list .link:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  color: #5bccf6;
+}
+
+.nav .item_list .link:hover i {
+  opacity: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  top: 10px;
+}
+
+.nav .item_list .link i {
   font-size: 1rem;
   position: absolute;
   opacity: 0;
@@ -82,7 +100,7 @@ body {
   color: #5bccf6;
 }
 
-.nav .item_list a span {
+.nav .item_list .link span {
   font-size: 1rem;
 }
 
@@ -207,10 +225,6 @@ div.changing-title h1 .letter.out {
   100% {
     top: -1.2em;
   }
-}
-
-html {
-  font-size: 16px;
 }
 
 @media screen and (max-width: 768px) {

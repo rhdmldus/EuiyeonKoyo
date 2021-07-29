@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/swiper.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script defer src="/js/main.js"></script>
   </head>
   <body>
@@ -18,58 +21,78 @@
         <i class="fas fa-hippo"></i>
       </div>
       <ul class="item_list">
-        <li class="item"><a href="#"><i class="fas fa-home"></i><span>home</span></a></li>
-        <li class="item"><a href="#"><i class="fas fa-smile"></i><span>about</span></a></li>
-        <li class="item"><a href="#"><i class="fas fa-folder-open"></i><span>work</span></a></li>
-        <li class="item"><a href="#"><i class="fas fa-paper-plane"></i><span>contact</span></a></li>
+        <li class="item"><a href="#mainTitle" class="link"><i class="fas fa-home"></i><span>home</span></a></li>
+        <li class="item"><a href="#introduce" class="link"><i class="fas fa-smile"></i><span>about</span></a></li>
+        <li class="item"><a href="#skills" class="link"><i class="fas fa-folder-open"></i><span>work</span></a></li>
+        <li class="item"><a href="#contact" class="link"><i class="fas fa-paper-plane"></i><span>contact</span></a></li>
       </ul>
     </nav>
     <main class="main">
-      <section class="title_wrap">
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+
+            <section id="mainTitle" class="title_wrap">
+              <h1 class="title">Euiyeon Ko</h1>
+              <div class="changing-title"><span>The</span><h1>Proactive</h1><span></span></span></div>
+              <p class="sub_title">web publisher</p>
+            </section>
+          </div>
+          <div class="swiper-slide">
+            <section id="introduce" class="introduce">
+              <h1 class="title">My name</h1>
+              <p class="about">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore modi
+                dolorum, aliquid nulla delectus quos porro exercitationem quis ab
+                error, architecto, deleniti a animi odio officiis? Eum eius obcaecati
+                voluptatum molestiae aspernatur eaque aliquid reiciendis doloribus
+                saepe ad, expedita quisquam odio, eligendi maiores aut accusamus
+                placeat impedit illum neque error! Consequuntur iure dignissimos
+                neque, quia rem aut architecto numquam, quibusdam officiis ex rerum
+                officia laboriosam voluptate, ratione enim velit voluptatibus
+                consectetur soluta eius? In numquam quidem corporis. Possimus,
+                cupiditate ut nostrum ipsam laborum voluptas? Ullam natus possimus
+                beatae odit est ipsum fugit, nisi cumque? Quisquam aliquid ipsam quasi
+                saepe deleniti.
+              </p>
+            </section>
+          </div>
+          <div class="swiper-slide">
+            <section id="skills" class="skills">
+              <h1 class="title">my skills</h1>
+              <ul class="skill_list">
+                <li class="item">HTML</li>
+                <li class="item">CSS</li>
+                <li class="item">JAVASCRIPT</li>
+              </ul>
+            </section>
+          </div>
+          <div class="swiper-slide">
+            <section id="works" class="works">
+              <ul class="work_list">
+                <li class="item"><a href="#">work1</a></li>
+                <li class="item"><a href="#">work2</a></li>
+                <li class="item"><a href="#">work3</a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="swiper-slide">
+            <section id="contact" class="contact">
+              <ul class="contact_list">
+                <li class="item">HP</li>
+                <li class="item">E-MAIL</li>
+                <li class="item">GidHub</li>
+              </ul>
+            </section>
+          </div>
         
-        <h1 class="title">Euiyeon Ko</h1>
-        <div class="changing-title"><span>The</span><h1>Proactive</h1><span></span></span></div>
-        <p class="sub_title">web publisher</p>
-      </section>
-      <section class="introduce">
-        <h1 class="title">My name</h1>
-        <p class="about">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore modi
-          dolorum, aliquid nulla delectus quos porro exercitationem quis ab
-          error, architecto, deleniti a animi odio officiis? Eum eius obcaecati
-          voluptatum molestiae aspernatur eaque aliquid reiciendis doloribus
-          saepe ad, expedita quisquam odio, eligendi maiores aut accusamus
-          placeat impedit illum neque error! Consequuntur iure dignissimos
-          neque, quia rem aut architecto numquam, quibusdam officiis ex rerum
-          officia laboriosam voluptate, ratione enim velit voluptatibus
-          consectetur soluta eius? In numquam quidem corporis. Possimus,
-          cupiditate ut nostrum ipsam laborum voluptas? Ullam natus possimus
-          beatae odit est ipsum fugit, nisi cumque? Quisquam aliquid ipsam quasi
-          saepe deleniti.
-        </p>
-      </section>
-      <section class="skills">
-        <h1 class="title">my skills</h1>
-        <ul class="skill_list">
-          <li class="item">HTML</li>
-          <li class="item">CSS</li>
-          <li class="item">JAVASCRIPT</li>
-        </ul>
-      </section>
-      <section class="works">
-        <ul class="work_list">
-          <li class="item"><a href="#">work1</a></li>
-          <li class="item"><a href="#">work2</a></li>
-          <li class="item"><a href="#">work3</a></li>
-        </ul>
-      </section>
-      <section class="contact">
-        <ul class="contact_list">
-          <li class="item">HP</li>
-          <li class="item">E-MAIL</li>
-          <li class="item">GidHub</li>
-        </ul>
-      </section>
+        </div>
+      
+      
+      
+      
     </main>
   </body>
 </html>

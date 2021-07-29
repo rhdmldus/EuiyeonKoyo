@@ -49,3 +49,44 @@ let count = 0;
 setInterval(()=> {
 ct.changeText(texts[++count % texts.length]);
 }, 2000);
+
+// swiper
+const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'vertical',
+    mousewheel: {
+        invert: false,
+    },
+    // If we need pagination
+    // pagination: {
+    //     el: '.swiper-pagination',
+    // },
+
+    // // Navigation arrows
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+
+    // // And if we need scrollbar
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    // },
+    });
+
+
+    let links = document.querySelectorAll('.item_list li a')
+    links.forEach(link => {
+        link.addEventListener('click',function(e){
+            e.preventDefault();
+            let target = e.currentTarget;
+            let idMoveTo = target.getAttribute('href').substr(1) 
+            let tagetElement = document.getElementById(`${idMoveTo}`)
+            tagetElement.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+            links.forEach(link => link.classList.remove('on'))
+            target.classList.add('on')
+
+    })
+})
+
+// https://codepen.io/zchee/pen/ogzvZZ

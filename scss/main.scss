@@ -5,6 +5,10 @@
     @return map-get($font-weight, $weight-name);
 }
 
+html{
+    font-size:16px;
+}
+
 body {
     background: $primary-color;
     color:$text-color;
@@ -22,6 +26,7 @@ body {
 .nav{
     position:absolute;
     top:0;left:0;
+    z-index: 10;
     display: flex;
     width:100%;
     background-color: $primary-color;
@@ -29,7 +34,8 @@ body {
             width:100%;
             display:flex;
             justify-content: center;
-            a{  position:relative;
+            .link{  
+                position:relative;
                 display: inline-block;
                 // width:100%;
                 text-decoration:none;
@@ -38,6 +44,15 @@ body {
                 text-align: center;
                 text-transform: uppercase;
                 transition:all .5s;
+                &.on{
+                    transform: translateY(10px);
+                    color:$accent-color;
+                    i{
+                        opacity: 1;
+                        transition:all .5s;
+                        top:10px;
+                    }
+                }
                 
                 &:hover{
                     transform: translateY(10px);
@@ -65,6 +80,7 @@ body {
 .main {
     width:80%;
     margin: 0 auto;
+    
     section{
         height:100vh;
         display:flex;
@@ -139,9 +155,7 @@ h1 {
     }
     }
 
-html{
-    font-size:16px;
-}
+
 @media screen and (max-width: 768px) {
     html{
         font-size: 14px;
