@@ -20,8 +20,10 @@ body {
     line-height: 80px;
 }
 .nav{
+    position:absolute;
+    top:0;left:0;
     display: flex;
-    // width:100%;
+    width:100%;
     background-color: $primary-color;
         .item_list{
             width:100%;
@@ -65,7 +67,17 @@ body {
     margin: 0 auto;
     section{
         height:100vh;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &.title_wrap{
+            margin:auto;
+            width:80%;
+
+        }
         .title {
+            align-self: flex-start;
             font-weight: weight(bold);
             font-family: map-get($font-family, 'montserrat' );
             &:hover{
@@ -76,6 +88,56 @@ body {
     
 
 }
+div.changing-title { 
+    font-size: 8vw;
+    height: 1.2em;
+    position: relative;
+    left:50%;
+    width: 100%;
+    overflow-y: hidden;
+    transform: translate3d(0,0,0);
+    transform: translateX(-50%);
+h1 {
+    font-size: 1em;
+    position: absolute;
+    left: 15vw;
+    top: 0;
+    margin: 0;
+    .letter {
+    position: relative;
+    top: 1.2em;
+    &.in {
+        animation-name: letter-in;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+    &.out {
+        top: 0em;
+        animation-name: letter-out;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+    }
+    }
+}
+}
+@keyframes letter-in {
+    0% {
+        top: 1.2em;
+    }
+    100% {
+        top: 0em;
+    }
+    }
+    @keyframes letter-out {
+    0% {
+        top: 0em;
+    }
+    100% {
+        top: -1.2em;
+    }
+    }
 
 html{
     font-size:16px;
@@ -88,3 +150,6 @@ html{
         padding:$padding-medium;
     }
 }
+
+
+

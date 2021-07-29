@@ -26,9 +26,13 @@ body {
 }
 
 .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   background-color: #030e12;
 }
 
@@ -89,15 +93,120 @@ body {
 
 .main section {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main section.title_wrap {
+  margin: auto;
+  width: 80%;
 }
 
 .main section .title {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
 
 .main section .title:hover {
   color: #5bccf6;
+}
+
+div.changing-title {
+  font-size: 8vw;
+  height: 1.2em;
+  position: relative;
+  left: 50%;
+  width: 100%;
+  overflow-y: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+div.changing-title h1 {
+  font-size: 1em;
+  position: absolute;
+  left: 15vw;
+  top: 0;
+  margin: 0;
+}
+
+div.changing-title h1 .letter {
+  position: relative;
+  top: 1.2em;
+}
+
+div.changing-title h1 .letter.in {
+  -webkit-animation-name: letter-in;
+          animation-name: letter-in;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+div.changing-title h1 .letter.out {
+  top: 0em;
+  -webkit-animation-name: letter-out;
+          animation-name: letter-out;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes letter-in {
+  0% {
+    top: 1.2em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+@keyframes letter-in {
+  0% {
+    top: 1.2em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+@-webkit-keyframes letter-out {
+  0% {
+    top: 0em;
+  }
+  100% {
+    top: -1.2em;
+  }
+}
+
+@keyframes letter-out {
+  0% {
+    top: 0em;
+  }
+  100% {
+    top: -1.2em;
+  }
 }
 
 html {
