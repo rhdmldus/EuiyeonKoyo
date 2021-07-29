@@ -9,8 +9,14 @@ $font-weight: (
 $font-family: (
     "montserrat": ("Montserrat", sans-serif)
 );
-$font-small: 16px;
-$font-medium: 24px;
-$font-large: 36px;
+$font-small: 1rem;
+$font-medium: 2rem;
+$font-large: 3rem;
 
-$padding-large: 30px 24px;
+$padding-medium: 30px 25px;
+$padding-large: 30px 50px;
+
+
+@media screen and (max-width: 768px) {
+    
+}

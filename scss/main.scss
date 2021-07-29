@@ -35,18 +35,23 @@ body {
                 padding:$padding-large;
                 text-align: center;
                 text-transform: uppercase;
-                transition:.5s;
+                transition:all .5s;
+                
                 &:hover{
+                    transform: translateY(10px);
                     color:$accent-color;
                     i{
-                        display: inline-block;
+                        opacity: 1;
+                        transition:all .5s;
+                        top:10px;
                     }
                 }
                 i{
                     font-size:$font-small;
                     position:absolute;
-                    display:none;
-                    top:57px;left:50%;transform:translateX(-50%);
+                    opacity: 0;
+                    top:5px;left:50%;transform:translateX(-50%);
+                    color:$accent-color;
                 }
                 span{
                     font-size:$font-small;
@@ -70,4 +75,16 @@ body {
     }
     
 
+}
+
+html{
+    font-size:16px;
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+    .nav .item_list a{
+        padding:$padding-medium;
+    }
 }

@@ -16,7 +16,7 @@ body {
 
 .hippo {
   display: inline-block;
-  font-size: 36px;
+  font-size: 3rem;
   text-align: center;
   width: 130px;
   height: 80px;
@@ -47,33 +47,39 @@ body {
   display: inline-block;
   text-decoration: none;
   color: #fcde67;
-  padding: 30px 24px;
+  padding: 30px 50px;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .nav .item_list a:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
   color: #5bccf6;
 }
 
 .nav .item_list a:hover i {
-  display: inline-block;
+  opacity: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  top: 10px;
 }
 
 .nav .item_list a i {
-  font-size: 16px;
+  font-size: 1rem;
   position: absolute;
-  display: none;
-  top: 57px;
+  opacity: 0;
+  top: 5px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  color: #5bccf6;
 }
 
 .nav .item_list a span {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .main {
@@ -92,5 +98,18 @@ body {
 
 .main section .title:hover {
   color: #5bccf6;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .nav .item_list a {
+    padding: 30px 25px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
