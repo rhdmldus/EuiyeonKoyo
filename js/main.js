@@ -51,28 +51,28 @@ ct.changeText(texts[++count % texts.length]);
 }, 2000);
 
 // swiper
-const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'vertical',
-    mousewheel: {
-        invert: false,
-    },
-    // If we need pagination
-    // pagination: {
-    //     el: '.swiper-pagination',
-    // },
+// const swiper = new Swiper('.swiper-container', {
+//     // Optional parameters
+//     direction: 'vertical',
+//     mousewheel: {
+//         invert: false,
+//     },
+//     // If we need pagination
+//     // pagination: {
+//     //     el: '.swiper-pagination',
+//     // },
 
-    // // Navigation arrows
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
+//     // // Navigation arrows
+//     // navigation: {
+//     //     nextEl: '.swiper-button-next',
+//     //     prevEl: '.swiper-button-prev',
+//     // },
 
-    // // And if we need scrollbar
-    // scrollbar: {
-    //     el: '.swiper-scrollbar',
-    // },
-    });
+//     // // And if we need scrollbar
+//     // scrollbar: {
+//     //     el: '.swiper-scrollbar',
+//     // },
+//     });
 
 
     let links = document.querySelectorAll('.item_list li a')
@@ -80,8 +80,8 @@ const swiper = new Swiper('.swiper-container', {
         link.addEventListener('click',function(e){
             e.preventDefault();
             let target = e.currentTarget;
-            let idMoveTo = target.getAttribute('href').substr(1) 
-            let tagetElement = document.getElementById(`${idMoveTo}`)
+            let idMoveTo = target.getAttribute('href')
+            let tagetElement = document.querySelector(`${idMoveTo}`)
             tagetElement.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
             links.forEach(link => link.classList.remove('on'))
             target.classList.add('on')
@@ -91,3 +91,39 @@ const swiper = new Swiper('.swiper-container', {
 
 // https://codepen.io/zchee/pen/ogzvZZ
 
+
+
+window.onscroll = function(){
+    let header = document.querySelector('.nav')
+    let headerHeight = header.offsetHeight
+    let windowTop = window.scrollY
+    if(windowTop >= headerHeight) {
+        header.classList.add('drop')
+    }
+    else{
+        header.classList.remove('drop')
+    }
+}
+
+(function() {
+    'use strict';
+  
+    var section = document.querySelectorAll(".section");
+    var sections = {};
+    var i = 0;
+  
+    Array.prototype.forEach.call(section, function(e) {
+      sections[e.id] = e.offsetTop;
+    });
+  
+    window.onscroll = function() {
+      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  
+      for (i in sections) {
+        if (sections[i] <= scrollPosition) {
+          document.querySelector('.active').setAttribute('class', ' ');
+          document.querySelector('a[href*=' + i + ']').setAttribute('class', 'on');
+        }
+      }
+    };
+  })

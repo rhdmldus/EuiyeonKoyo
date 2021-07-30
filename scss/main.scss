@@ -30,6 +30,13 @@ body {
     display: flex;
     width:100%;
     background-color: $primary-color;
+        &.drop{
+            position:fixed;
+            animation-name: drop_down;
+            animation-duration: 0.3s;
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+            background: $nav-color;
+        }
         .item_list{
             width:100%;
             display:flex;
@@ -89,7 +96,7 @@ body {
         align-items: center;
         &.title_wrap{
             margin:auto;
-            width:80%;
+            width:56vw;
 
         }
         .title {
@@ -138,6 +145,14 @@ h1 {
     }
 }
 }
+@keyframes drop_down {
+    0% {
+        top: -90px;
+    }
+    100%{
+        top:0;
+    }
+}
 @keyframes letter-in {
     0% {
         top: 1.2em;
@@ -160,7 +175,7 @@ h1 {
     html{
         font-size: 14px;
     }
-    .nav .item_list a{
+    .nav .item_list .link{
         padding:$padding-medium;
     }
 }
