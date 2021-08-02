@@ -1,15 +1,15 @@
-$primary-color:#131f24;
-$accent-color:#5bccf6;
-$text-color:#fcde67;
-$nav-color:#1c2a30;
+$primary-color1: #131f24;
+$primary-color2: #171b1d;
+$accent-color: #5bccf6;
+$text-color: #fcde67;
+$nav-color: #1c2a30;
+$font-main: "Montserrat", sans-serif;
 $font-weight: (
-    "regular": 400,
-    "medium": 500,
-    "bold": 700
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
 );
-$font-family: (
-    "montserrat": ("Montserrat", sans-serif)
-);
+
 $font-small: 1rem;
 $font-medium: 2rem;
 $font-large: 3rem;
@@ -17,7 +17,5 @@ $font-large: 3rem;
 $padding-medium: 30px 25px;
 $padding-large: 30px 50px;
 
-
 @media screen and (max-width: 768px) {
-    
 }

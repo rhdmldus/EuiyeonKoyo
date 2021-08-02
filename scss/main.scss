@@ -1,184 +1,193 @@
-@import './resets';
-@import './variables';
+@import "./resets";
+@import "./variables";
 
 @function weight($weight-name) {
-    @return map-get($font-weight, $weight-name);
+  @return map-get($font-weight, $weight-name);
 }
 
-html{
-    font-size:16px;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: $primary-color;
-    color:$text-color;
+  background: $primary-color1;
+  color: $text-color;
+  font-family: $font-main;
 }
-.hippo{
-    display:inline-block;
-    font-size: $font-large;
-    text-align: center;
-    width: 130px;
-    height:80px;
-    background:$accent-color;
-    color:$text-color;
-    line-height: 80px;
+
+.di_no {
+  display: none !important;
 }
-.nav{
-    position:absolute;
-    top:0;left:0;
-    z-index: 10;
+.hippo {
+  display: inline-block;
+  font-size: $font-large;
+  text-align: center;
+  width: 130px;
+  height: 80px;
+  background: $accent-color;
+  color: $text-color;
+  line-height: 80px;
+  border: 1px soild #fff;
+}
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  background-color: $primary-color1;
+  &.drop {
+    position: fixed;
+    animation-name: drop_down;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    background: $nav-color;
+  }
+  .item_list {
+    width: 100%;
     display: flex;
-    width:100%;
-    background-color: $primary-color;
-        &.drop{
-            position:fixed;
-            animation-name: drop_down;
-            animation-duration: 0.3s;
-            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
-            background: $nav-color;
+    justify-content: center;
+    .link {
+      position: relative;
+      display: inline-block;
+      // width:100%;
+      text-decoration: none;
+      color: $text-color;
+      padding: $padding-large;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all 0.5s;
+      &.on,
+      &:hover {
+        transform: translateY(10px);
+        color: $accent-color;
+        i {
+          opacity: 1;
+          transition: all 0.5s;
+          top: 10px;
         }
-        .item_list{
-            width:100%;
-            display:flex;
-            justify-content: center;
-            .link{  
-                position:relative;
-                display: inline-block;
-                // width:100%;
-                text-decoration:none;
-                color:$text-color;
-                padding:$padding-large;
-                text-align: center;
-                text-transform: uppercase;
-                transition:all .5s;
-                &.on{
-                    transform: translateY(10px);
-                    color:$accent-color;
-                    i{
-                        opacity: 1;
-                        transition:all .5s;
-                        top:10px;
-                    }
-                }
-                
-                &:hover{
-                    transform: translateY(10px);
-                    color:$accent-color;
-                    i{
-                        opacity: 1;
-                        transition:all .5s;
-                        top:10px;
-                    }
-                }
-                i{
-                    font-size:$font-small;
-                    position:absolute;
-                    opacity: 0;
-                    top:5px;left:50%;transform:translateX(-50%);
-                    color:$accent-color;
-                }
-                span{
-                    font-size:$font-small;
-                }
-            }
-        }
-    
+      }
+      i {
+        font-size: $font-small;
+        position: absolute;
+        opacity: 0;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $accent-color;
+      }
+      span {
+        font-size: $font-small;
+      }
+    }
+  }
 }
 .main {
-    width:80%;
-    margin: 0 auto;
-    
-    section{
-        height:100vh;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        &.title_wrap{
-            margin:auto;
-            width:56vw;
+  width: 100%;
+  margin: 0 auto;
 
-        }
-        .title {
-            align-self: flex-start;
-            font-weight: weight(bold);
-            font-family: map-get($font-family, 'montserrat' );
-            &:hover{
-                color:$accent-color;
-            }
-        }
-    }
-    
-
-}
-div.changing-title { 
-    font-size: 8vw;
-    height: 1.2em;
-    position: relative;
-    left:50%;
+  section {
     width: 100%;
-    overflow-y: hidden;
-    transform: translate3d(0,0,0);
-    transform: translateX(-50%);
-h1 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:nth-child(even) {
+      background-color: $primary-color2;
+    }
+    &.title_wrap {
+      display: flex;
+      justify-content: center;
+      .title_group {
+        width: 60%;
+      }
+    }
+    .title {
+      font-weight: weight(bold);
+      &:hover {
+        color: $accent-color;
+      }
+    }
+    &.section_introduce {
+      .wrap_about {
+        display: flex;
+        li {
+          width: 300px;
+          height: 300px;
+          background-color: $primary-color1;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+div.changing-title {
+  font-size: 8vw;
+  height: 1.2em;
+  position: relative;
+  left: 50%;
+  width: 100%;
+  overflow-y: hidden;
+  transform: translate3d(0, 0, 0);
+  transform: translateX(-50%);
+  h1 {
     font-size: 1em;
     position: absolute;
     left: 15vw;
     top: 0;
     margin: 0;
     .letter {
-    position: relative;
-    top: 1.2em;
-    &.in {
+      position: relative;
+      top: 1.2em;
+      &.in {
         animation-name: letter-in;
         animation-duration: 0.3s;
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
-    }
-    &.out {
+      }
+      &.out {
         top: 0em;
         animation-name: letter-out;
         animation-duration: 0.3s;
         animation-timing-function: ease-in;
         animation-fill-mode: forwards;
+      }
     }
-    }
-}
+  }
 }
 @keyframes drop_down {
-    0% {
-        top: -90px;
-    }
-    100%{
-        top:0;
-    }
+  0% {
+    top: -90px;
+  }
+  100% {
+    top: 0;
+  }
 }
 @keyframes letter-in {
-    0% {
-        top: 1.2em;
-    }
-    100% {
-        top: 0em;
-    }
-    }
-    @keyframes letter-out {
-    0% {
-        top: 0em;
-    }
-    100% {
-        top: -1.2em;
-    }
-    }
-
-
-@media screen and (max-width: 768px) {
-    html{
-        font-size: 14px;
-    }
-    .nav .item_list .link{
-        padding:$padding-medium;
-    }
+  0% {
+    top: 1.2em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+@keyframes letter-out {
+  0% {
+    top: 0em;
+  }
+  100% {
+    top: -1.2em;
+  }
 }
 
-
-
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .nav .item_list .link {
+    padding: $padding-medium;
+  }
+}
