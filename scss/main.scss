@@ -89,6 +89,7 @@ body {
   margin: 0 auto;
 
   section {
+    position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -124,116 +125,176 @@ body {
     }
   }
 }
+.section_skills {
+  background: #f0f0f0;
+  color: $text-color2;
+}
 .skills_list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   .item {
     position: relative;
-    width: 150px;
+    .card {
+      margin: 1rem;
+      overflow: hidden;
+      position: relative;
+      transition: all 3s;
+      width: 200px;
+      height: 300px;
+      border-radius: 20px;
+      background: #f0f0f0;
+      box-shadow: 0 0 0 $color-shadow, 0 0 0 $white,
+        10px 10px 10px $color-shadow inset, -10px -10px 10px $white inset;
+      &.on {
+        animation: cardAni 1s linear forwards;
+        // svg circle:nth-child(2){
+        //     animation:skill 3s linear forwards;
+        //     }
+        .circle.html {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 90 / 100);
+          }
+        }
+        .circle.css {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 89 / 100);
+          }
+        }
+        .circle.jq {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 80 / 100);
+          }
+        }
+        .circle.js {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 60 / 100);
+          }
+        }
+        .circle.ap {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 70 / 100);
+          }
+        }
+        .circle.github {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 85 / 100);
+          }
+        }
+      }
+    }
+    @keyframes cardAni {
+      100% {
+        width: 200px;
+        height: 300px;
+        background: $white-3;
+        box-shadow: 40px 40px 40px $color-shadow, 0 0 0 $white,
+          0 0 0 $color-shadow inset, 2px 2px 2px $white inset;
+      }
+    }
     .circle {
-      width: 100px;
-      height: 100px;
-      border: 4px solid rgba(255, 255, 255, 0.05);
+      color: #457b9d;
+      width: 75px;
+      height: 75px;
+      // border: 30px solid $white;
       border-radius: 50%;
       position: relative;
-      .pie {
-        position: relative;
-        width: 120px;
-        height: 120px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: -4px -2px 4px 0px $white, 4px 2px 6px 0px $white-2;
+      &::after {
+        content: "";
+        position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) rotate(-90deg);
-        svg circle {
-          fill: transparent;
-          stroke: #fff;
-          stroke-width: 10;
-          stroke-dasharray: 314px;
-          stroke-dashoffset: 314px;
-          stroke-linecap: round;
-          transition: stroke-dashoffset 3s;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        box-shadow: 2px 2px 2px 0px $white-2 inset,
+          -2px -2px 2px 0px $white inset;
+      }
+      &.html {
+        transition: stroke-dashoffset 3s;
+        svg circle:nth-child(2) {
+          stroke: #e55126;
         }
       }
-      &.html.on {
-        .pie {
-          svg circle {
-            stroke-dashoffset: calc(314px - 314px * 90 / 100);
-          }
+      &.css {
+        svg circle:nth-child(2) {
+          stroke: #0c73b8;
         }
       }
-      &.css.on {
-        .pie {
-          svg circle {
-            stroke-dasharray: calc(314px - 314px * 85 / 100);
-          }
+      &.js {
+        svg circle:nth-child(2) {
+          stroke: #e5a228;
         }
       }
-      &.jquery.on {
-        .pie {
-          svg circle {
-            stroke-dasharray: calc(314px - 314px * 78 / 100);
-          }
+      &.ap {
+        svg circle:nth-child(2) {
+          stroke: #01d5f5;
         }
       }
-      &.js.on {
-        .pie {
-          svg circle {
-            stroke-dasharray: calc(314px - 314px * 60 / 100);
-          }
-        }
-      }
-      &.photoshop.on {
-        .pie {
-          svg circle {
-            stroke-dasharray: calc(314px - 314px * 75 / 100);
-          }
-        }
-      }
-      &.illustrator.on {
-        .pie {
-          svg circle {
-            stroke-dasharray: calc(314px - 314px * 70 / 100);
-          }
+      &.github {
+        svg circle:nth-child(2) {
+          stroke: #ff7800;
         }
       }
     }
-  }
-  @keyframes pieChart {
-    100% {
+    .pie {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      width: 120px;
+      height: 120px;
+      position: relative;
+      border-radius: 50%;
+    }
+    svg circle {
+      fill: none;
+      stroke: $white-e;
+      stroke-width: 14;
+      stroke-dasharray: 333px;
       stroke-dashoffset: 0;
+      &:nth-child(2) {
+        stroke-dasharray: calc(332px * 0.9);
+        stroke-dashoffset: 250;
+        stroke: #457b9d;
+        stroke-linecap: round;
+      }
     }
-  }
-  // .circle {
-  //   &.html svg circle:nth-child(2) {
-  //     stroke-dashoffset: calc(315px - (315px * 90) / 100);
-  //   }
-  //   &.css svg circle:nth-child(2) {
-  //     stroke-dashoffset: calc(315px - (315px * 87) / 100);
-  //   }
-  //   &.jquery svg circle:nth-child(2) {
-  //     stroke-dashoffset: calc(315px - (315px * 80) / 100);
-  //   }
-  //   &.js svg circle:nth-child(2) {
-  //     stroke-dashoffset: calc(315px - (315px * 65) / 100);
-  //   }
-  //   &.photoshop svg circle:nth-child(2) {
-  //     stroke-dashoffset: calc(315px - (315px * 75) / 100);
-  //   }
-  //   &.illustrator svg circle:nth-child(2) {
-  //     stroke-dashoffset: calc(315px - (315px * 73) / 100);
-  //   }
-  // }
-  .percent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .tool {
-    text-align: center;
+    @keyframes skill {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+    .counter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+    }
+    .title {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+    }
   }
 }
-
 div.changing-title {
   font-size: 8vw;
   height: 1.2em;
@@ -299,5 +360,32 @@ div.changing-title {
   }
   .nav .item_list .link {
     padding: $padding-medium;
+  }
+}
+
+.tab_header {
+  display: flex;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translatex(-50%);
+  button {
+    color: $text-color2;
+    border: 0;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 20px;
+    border-radius: 20px;
+    background: $white-3;
+    box-shadow: 10px 10px 10px $color-shadow, 0 0 $white,
+      0 0 0 $color-shadow inset, 1px 1px 1px $white inset;
+    &.on {
+      background: #f0f0f0;
+      box-shadow: 0 0 0 $color-shadow, 0 0 0 $white,
+        5px 5px 5px $color-shadow inset, -5px -5px 5px $white inset;
+    }
   }
 }

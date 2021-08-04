@@ -107,3 +107,45 @@ window.onscroll = function () {
     }
   });
 };
+
+let cards = document.querySelectorAll(".card");
+for (let i = 0; i < cards.length; i++) {
+  let count = 0;
+  cards[i].addEventListener("click", function () {
+    this.classList.toggle("on");
+    let counter = this.children[1].children[1];
+    let countNum = counter.getAttribute("data-num");
+    console.log(countNum);
+
+    setInterval(function () {
+      if (count == countNum) {
+        clearInterval(count);
+      } else {
+        count += 1;
+        counter.textContent = count + "%";
+      }
+    }, 32);
+  });
+}
+
+let circle = document.querySelector("circle");
+console.log(circle.getTotalLength());
+
+let btns = document.querySelectorAll(".tab_header .btn");
+btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    let target = e.currentTarget;
+    btns.forEach((btn) => {
+      btn.classList.remove("on");
+    });
+    target.classList.toggle("on");
+    let dataTab = target.getAttribute("data-tab");
+    console.log(dataTab);
+    let content = document.querySelector("div[data-tab=" + dataTab + "]");
+    let containers = document.querySelectorAll(".skill_content");
+    containers.forEach((container) => {
+      container.classList.add("di_no");
+    });
+    content.classList.remove("di_no");
+  });
+});

@@ -81,98 +81,186 @@
         </ul>
       </section>
       <section id="skills" class="section_skills">
-        <ul class="tab_header">
-          <li data-tab="done">what I can do</li>
-          <li data-tab="doing">what I'm learning</li>
-          <li data-tab="willdo">what I would love to do</li>
-        </ul>
-        <div class="done" data-tab="done">
-          <h3>제가 할 수 있는 것입니다.</h3>
+        <div class="tab_header">
+          <button type="button" data-tab="done" class="btn on">skills</button>
+          <button type="button" data-tab="doing" class="btn">learning</button>
+        </div>
+        <div class="skill_content" data-tab="done">
+          <h3>제가 할 수있는 것들입니다.</h3>
           <ul class="skills_list">
             <li class="item">
-              <div class="circle html">
-                <div class="pie">
-                  <svg>
-                    <circle cx="60" cy="60" r="50"></circle>
-                  </svg>
+              <div class="card">
+                <h1 class="title">html</h1>
+                <div class="circle html">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="wrap_txt counter" data-num="90">0%</div>
                 </div>
-                <p class="percent">0%</p>
-                <p class="tool">html</p>
               </div>
             </li>
             <li class="item">
-              <div class="circle css">
-                <div class="pie">
-                  <svg>
-                    <circle cx="60" cy="60" r="50"></circle>
-                  </svg>
+              <div class="card">
+                <h1 class="title">css</h1>
+                <div class="circle css">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="89">0%</div>
                 </div>
-                <p class="percent">0%</p>
-                <p class="tool">css</p>
               </div>
             </li>
             <li class="item">
-              <div class="circle jquery">
-                <div class="pie">
-                  <svg>
-                    <circle cx="60" cy="60" r="50"></circle>
-                  </svg>
+              <div class="card">
+                <h1 class="title">js</h1>
+                <div class="circle js">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="60">0%</div>
                 </div>
-                <p class="percent">0%</p>
-                <p class="tool">jquery</p>
               </div>
             </li>
             <li class="item">
-              <div class="circle js">
-                <div class="pie">
-                  <svg>
-                    <circle cx="60" cy="60" r="50"></circle>
-                  </svg>
+              <div class="card">
+                <h1 class="title">jquery</h1>
+                <div class="circle jq">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="80">0%</div>
                 </div>
-                <p class="percent">0%</p>
-                <p class="tool">javascript</p>
               </div>
             </li>
             <li class="item">
-              <div class="circle photoshop">
-                <div class="pie">
-                  <svg>
-                    <circle cx="60" cy="60" r="50"></circle>
-                  </svg>
+              <div class="card">
+                <h1 class="title">photoshop</h1>
+                <div class="circle ap">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="70">0%</div>
                 </div>
-                <p class="percent">0%</p>
-                <p class="tool">photoshop</p>
               </div>
             </li>
             <li class="item">
-              <div class="circle illustrator">
-                <div class="pie">
-                  <svg>
-                    <circle cx="60" cy="60" r="50"></circle>
-                  </svg>
+              <div class="card">
+                <h1 class="title">github</h1>
+                <div class="circle github">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="85">0%</div>
                 </div>
-                <p class="percent">0%</p>
-                <p class="tool">illustrator</p>
               </div>
             </li>
           </ul>
         </div>
-        <div class="doing di_no" data-tab="doing">
-          <h3>앞으로 제가 할 수 있게 될 것입니다.</h3>
+        <div class="skill_content di_no" data-tab="doing">
+          <h3>친해지고 싶어서 알아가고있는 중입니다.</h3>
           <ul class="skills_list">
-            <li class="item">React</li>
-            <li class="item">Sass/Scss</li>
-            <li class="item">JAVASCRIPT</li>
-          </ul>
-        </div>
-        <div class="willdo di_no" data-tab="willdo">
-          <h3>앞으로 제가 배울 것입니다.</h3>
-          <ul class="skills_list">
-            <li class="item">React</li>
-            <li class="item">Vue.js</li>
-            <li class="item">Angular</li>
-            <li class="item">zeplin</li>
-            <li class="item">figma</li>
+            <li class="item">
+              <div class="card">
+                <h1 class="title">react</h1>
+                <div class="circle react">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="wrap_txt counter" data-num="90">0%</div>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="card">
+                <h1 class="title">scss/sass</h1>
+                <div class="circle scss/sass">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="80">0%</div>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="card">
+                <h1 class="title">js</h1>
+                <div class="circle js">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="60">0%</div>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="card">
+                <h1 class="title">js</h1>
+                <div class="circle js">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="60">0%</div>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="card">
+                <h1 class="title">js</h1>
+                <div class="circle js">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="60">0%</div>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="card">
+                <h1 class="title">js</h1>
+                <div class="circle js">
+                  <div class="pie">
+                    <svg>
+                      <circle cx="60" cy="60" r="53"></circle>
+                      <circle cx="60" cy="60" r="53"></circle>
+                    </svg>
+                  </div>
+                  <div class="counter" data-num="60">0%</div>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
