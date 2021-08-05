@@ -21,9 +21,9 @@ body {
 }
 
 .hippo {
-  position:absolute;
-  top:0;
-  left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: inline-block;
   font-size: $font-large;
   text-align: center;
@@ -40,46 +40,70 @@ body {
   left: 0;
   z-index: 10;
   display: flex;
+  height: 80px;
   width: 100%;
   background-color: $primary-color-light1;
   box-shadow: $shadow-nav-light-100;
-  .bars{
-    position:absolute;
-    top:0;right:0;
-    width:80px;height:80px;
+  .bars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
     font-size: $font-medium;
-    display:none;
+    display: none;
   }
-  .switch_group{
-    position: absolute;top:50%;right:30px;
+  .switch_group {
+    position: absolute;
+    top: 50%;
+    right: 30px;
     transform: $move-y-center;
-    width:100px;
-    height:50px;
+    width: 100px;
+    height: 50px;
     border-radius: 35px;
     box-shadow: $shadow-nav-light-100;
     font-size: $font-small;
-    background:$white-3;
-    
-    .theme_switch_input{
-      opacity:0;
+    background: $white-3;
+
+    .theme_switch_input {
+      opacity: 0;
     }
-    .switch_label{
-      width:100%;
-      position:absolute;
-      top:50%;left:50%;
-      transform:$move-xy-center;
-      display:inline-block;
-      i{
+    .switch_label {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: $move-xy-center;
+      display: inline-block;
+      i {
         opacity: 0.2;
-        position:absolute;
-        top:50%;
-        transform:$move-y-center;
-        &.fa-sun{
-          left:13px;
+        position: absolute;
+        top: 50%;
+        transform: $move-y-center;
+        &.fa-sun {
+          left: 13px;
         }
-        &.fa-moon{
-          right:13px;
+        &.fa-moon {
+          right: 13px;
         }
+      }
+    }
+    &::after {
+      content: "";
+      transition: transform 0.5s;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: $move-y-center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: $white;
+      box-shadow: $shadow-light-circle;
+    }
+    &.on {
+      &::after {
+        transform: translate(50px, -50%);
       }
     }
   }
@@ -107,7 +131,7 @@ body {
       text-align: center;
       text-transform: uppercase;
       transition: all 0.5s;
-      font-weight:bold;
+      font-weight: bold;
       &.on,
       &:hover {
         transform: translateY(10px);
@@ -154,6 +178,40 @@ body {
       justify-content: center;
       .title_group {
         width: 66%;
+        div.changing-title {
+          font-size: 8vw;
+          height: 1.2em;
+          position: relative;
+          left: 50%;
+          width: 100%;
+          overflow-y: hidden;
+          transform: translate3d(0, 0, 0);
+          transform: $move-x-center;
+          h1 {
+            font-size: 1em;
+            position: absolute;
+            left: 19vw;
+            top: 0;
+            margin: 0;
+            .letter {
+              position: relative;
+              top: 1.2em;
+              &.in {
+                animation-name: letter-in;
+                animation-duration: 0.3s;
+                animation-timing-function: ease-out;
+                animation-fill-mode: forwards;
+              }
+              &.out {
+                top: 0em;
+                animation-name: letter-out;
+                animation-duration: 0.3s;
+                animation-timing-function: ease-in;
+                animation-fill-mode: forwards;
+              }
+            }
+          }
+        }
       }
     }
     .title {
@@ -176,40 +234,6 @@ body {
   }
 }
 
-div.changing-title {
-  font-size: 8vw;
-  height: 1.2em;
-  position: relative;
-  left: 50%;
-  width: 100%;
-  overflow-y: hidden;
-  transform: translate3d(0, 0, 0);
-  transform: $move-x-center;
-  h1 {
-    font-size: 1em;
-    position: absolute;
-    left: 19vw;
-    top: 0;
-    margin: 0;
-    .letter {
-      position: relative;
-      top: 1.2em;
-      &.in {
-        animation-name: letter-in;
-        animation-duration: 0.3s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-      }
-      &.out {
-        top: 0em;
-        animation-name: letter-out;
-        animation-duration: 0.3s;
-        animation-timing-function: ease-in;
-        animation-fill-mode: forwards;
-      }
-    }
-  }
-}
 @keyframes drop_down {
   0% {
     top: -90px;
@@ -235,56 +259,67 @@ div.changing-title {
   }
 }
 
+@media screen and (max-width: 1026px) {
+  html {
+    font-size: 15px;
+  }
+  .nav {
+    .item_list {
+      .link {
+        padding: $padding-small;
+      }
+    }
+  }
+}
 @media screen and (max-width: 902px) {
   html {
     font-size: 15px;
   }
   .nav {
-    .hippo{
-      width:80px;
+    .hippo {
+      width: 80px;
     }
     .item_list {
-      position:fixed;
-      top:0;
-      left:-300px;
-      width:300px;
-      height:100%;
-      display:flex;
-      flex-direction:column;
-      background:$text-color-light;
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: $text-color-light;
       transition: left 0.5s;
       .link {
-        padding: $padding-medium;
+        padding: $padding-small;
       }
-      &.on{
-        top:0;
-        left:0;
-        .link{
-          margin-left:25px;
+      &.on {
+        top: 0;
+        left: 0;
+        .link {
+          margin-left: 25px;
           i {
             opacity: 1;
             position: absolute;
             top: 50%;
-            left:0;
+            left: 0;
             transform: $move-y-center;
             color: $accent-color;
           }
-
         }
       }
     }
-    .bars{
-      display:block;
+    .bars {
+      display: block;
     }
-
+    .switch_group {
+      display: none;
+    }
   }
 }
 @media screen and (max-width: 768px) {
   html {
     font-size: 14px;
   }
-  
-  
 }
 
 .tab_header {
@@ -402,7 +437,7 @@ div.changing-title {
         border-radius: 50%;
         width: 100%;
         height: 100%;
-        box-shadow: $shadow-light-circle-inset
+        box-shadow: $shadow-light-circle-inset;
       }
       &.html {
         transition: stroke-dashoffset 3s;
@@ -422,7 +457,7 @@ div.changing-title {
       }
       &.jq {
         svg circle:nth-child(2) {
-          stroke: #0769AD;
+          stroke: #0769ad;
         }
       }
       &.ap {
@@ -483,4 +518,3 @@ div.changing-title {
     }
   }
 }
-

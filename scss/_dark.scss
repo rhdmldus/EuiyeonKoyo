@@ -1,191 +1,367 @@
-.dark{
-    background: $primary-color-dark1;
+.dark {
+  background: $primary-color-dark1;
+  color: $text-color-light;
+  .hippo {
+    background: $accent-color;
     color: $text-color;
-    .hippo {
-        display: inline-block;
-        font-size: $font-large;
-        text-align: center;
-        width: 130px;
-        height: 80px;
-        background: $text-color;
-        color: $accent-color;
-        line-height: 80px;
-        border: 1px soild #fff;
+    border: 1px soild #fff;
+  }
+  .nav {
+    background-color: $primary-color-dark1;
+    box-shadow: $shadow-nav-dark-100;
+    .bars {
+      color: $text-color-light;
+    }
+    .switch_group {
+      box-shadow: $shadow-nav-light-100;
+      background: $primary-color-dark1;
+
+      .theme_switch_input {
+      }
+      .switch_label {
+        i {
+          opacity: 0.8;
+          &.fa-sun {
+          }
+          &.fa-moon {
+          }
         }
-        .nav {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            display: flex;
-            width: 100%;
-            background-color: $nav-color;
-            &.drop {
-            position: fixed;
-            animation-name: drop_down;
-            animation-duration: 0.3s;
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            background: $nav-color;
-            }
-            .item_list {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            .link {
-                position: relative;
-                display: inline-block;
-                // width:100%;
-                text-decoration: none;
-                color: $text-color;
-                padding: $padding-large;
-                text-align: center;
-                text-transform: uppercase;
-                transition: all 0.5s;
-                &.on,
-                &:hover {
-                transform: translateY(10px);
-                color: $accent-color;
-                i {
-                    opacity: 1;
-                    transition: all 0.5s;
-                    top: 10px;
-                }
-                }
-                i {
-                font-size: $font-small;
-                position: absolute;
-                opacity: 0;
-                top: 5px;
-                left: 50%;
-                transform: translateX(-50%);
-                color: $accent-color;
-                }
-                span {
-                font-size: $font-small;
-                }
-            }
-            }
+      }
+      &::after {
+        background: $primary-color-dark1;
+        box-shadow: $shadow-dark-circle;
+      }
+      &.on {
+        &::after {
         }
-        .main {
-            width: 100%;
-            margin: 0 auto;
-        
-            section {
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: $primary-color-light1;
-            &:nth-child(even) {
-                background-color: $primary-color-light1;
-            }
-            &.title_wrap {
-                display: flex;
-                justify-content: center;
-                .title_group {
-                width: 66%;
-                }
-            }
-            .title {
-                font-weight: weight(bold);
-                &:hover {
-                color: $accent-color;
-                }
-            }
-            &.section_introduce {
-                .wrap_about {
-                display: flex;
-                li {
-                    width: 300px;
-                    height: 300px;
-                    background-color: $primary-color-light1;
-                    margin: 10px;
-                }
-                }
-            }
-            }
+      }
+    }
+    &.drop {
+      .item_list {
+        .link {
         }
-        
-        div.changing-title {
-        font-size: 8vw;
-        height: 1.2em;
-        position: relative;
-        left: 50%;
-        width: 100%;
-        overflow-y: hidden;
-        transform: translate3d(0, 0, 0);
-        transform: translateX(-50%);
-        h1 {
-          font-size: 1em;
-          position: absolute;
-          left: 19vw;
-          top: 0;
-          margin: 0;
-          .letter {
-            position: relative;
-            top: 1.2em;
-            &.in {
-              animation-name: letter-in;
-              animation-duration: 0.3s;
-              animation-timing-function: ease-out;
-              animation-fill-mode: forwards;
-            }
-            &.out {
-              top: 0em;
-              animation-name: letter-out;
-              animation-duration: 0.3s;
-              animation-timing-function: ease-in;
-              animation-fill-mode: forwards;
+      }
+    }
+    .item_list {
+      .link {
+        color: $text-color-light;
+        &.on,
+        &:hover {
+          color: $accent-color;
+          i {
+          }
+        }
+        i {
+          color: $accent-color;
+        }
+        span {
+        }
+      }
+    }
+  }
+  .main {
+    section {
+      background-color: $primary-color-dark1;
+      &:nth-child(even) {
+        background-color: $primary-color-dark1;
+      }
+      &.title_wrap {
+        .title_group {
+          div.changing-title {
+            h1 {
+              .letter {
+                &.in {
+                }
+                &.out {
+                }
+              }
             }
           }
         }
+      }
+      .title {
+        &:hover {
+          color: $accent-color;
+        }
+      }
+      &.section_introduce {
+        .wrap_about {
+          li {
+            background-color: $primary-color-dark2;
+          }
+        }
+      }
     }
-    .section_skills {
-        background: $primary-color-dark1;
-        color: $text-color;
+  }
+  @media screen and (max-width: 902px) {
+    html {
     }
-    .skills_list {
-        .item {
-        .card {
-            background: $primary-color-dark1;
-            box-shadow: $shadow-card-dark-00;
-            
-            &.on {
-            animation: cardAni-dark 1s linear forwards;
+    .nav {
+      .hippo {
+      }
+      .item_list {
+        background: $primary-color-dark2;
+        .link {
+        }
+        &.on {
+          .link {
+            i {
+              color: $accent-color;
             }
+          }
+        }
+      }
+      .bars {
+      }
+      .switch_group {
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    html {
+    }
+  }
+
+  .tab_header {
+    button {
+      color: $text-color-light;
+      background: $primary-color-dark1;
+      box-shadow: $shadow-btn-dark-off;
+      &.on {
+        background: $primary-color-dark1;
+        box-shadow: $shadow-btn-dark-on;
+      }
+    }
+  }
+
+  .section_skills {
+    background: $primary-color-dark1;
+    color: $text-color-light;
+  }
+  .skills_list {
+    .item {
+      .card {
+        background: $primary-color-dark1;
+        box-shadow: $shadow-card-dark-00;
+        &.on {
+          animation: cardAni-dark 1s linear forwards;
         }
         @keyframes cardAni-dark {
-            100% {
+          100% {
             background: $primary-color-dark1;
             box-shadow: $shadow-card-dark-100;
-            }
+          }
         }
-        .circle {
-            box-shadow: $shadow-dark-circle;
-            &::after {
-            box-shadow: $shadow-dark-circle-inset;
-            }
+      }
+      .circle {
+        box-shadow: $shadow-dark-circle;
+        &::after {
+          box-shadow: $shadow-dark-circle-inset;
         }
-        svg circle {
-            fill: none;
-            stroke: rgba(255,255,255,0.1);
-            &:nth-child(2) {
-            }
+      }
+      .pie {
+      }
+      svg circle {
+        stroke: $dark-shadow;
+        &:nth-child(2) {
+          stroke: #457b9d;
         }
-        }
+      }
+      .counter {
+      }
+      .title {
+      }
     }
-    .tab_header {
-        button {
-        color: $text-color2;
-        background: $primary-color-dark1;
-        box-shadow: $shadow-btn-dark-off;
-        &.on {
-            background: $primary-color-dark1;
-            box-shadow: $shadow-btn-dark-on
-        }
-        }
-    }
+  }
 }
+// .dark{
+//     background: $primary-color-dark1;
+//     color: $text-color;
+//     .hippo {
+//         display: inline-block;
+//         font-size: $font-large;
+//         text-align: center;
+//         width: 130px;
+//         height: 80px;
+//         background: $text-color;
+//         color: $accent-color;
+//         line-height: 80px;
+//         border: 1px soild #fff;
+//         }
+//         .nav {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             z-index: 10;
+//             display: flex;
+//             width: 100%;
+//             background-color: $nav-color;
+//             &.drop {
+//             position: fixed;
+//             animation-name: drop_down;
+//             animation-duration: 0.3s;
+//             animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+//             background: $nav-color;
+//             }
+//             .item_list {
+//             width: 100%;
+//             display: flex;
+//             justify-content: center;
+//             .link {
+//                 position: relative;
+//                 display: inline-block;
+//                 // width:100%;
+//                 text-decoration: none;
+//                 color: $text-color;
+//                 padding: $padding-large;
+//                 text-align: center;
+//                 text-transform: uppercase;
+//                 transition: all 0.5s;
+//                 &.on,
+//                 &:hover {
+//                 transform: translateY(10px);
+//                 color: $accent-color;
+//                 i {
+//                     opacity: 1;
+//                     transition: all 0.5s;
+//                     top: 10px;
+//                 }
+//                 }
+//                 i {
+//                 font-size: $font-small;
+//                 position: absolute;
+//                 opacity: 0;
+//                 top: 5px;
+//                 left: 50%;
+//                 transform: translateX(-50%);
+//                 color: $accent-color;
+//                 }
+//                 span {
+//                 font-size: $font-small;
+//                 }
+//             }
+//             }
+//         }
+//         .main {
+//             width: 100%;
+//             margin: 0 auto;
+
+//             section {
+//             position: relative;
+//             width: 100%;
+//             min-height: 100vh;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             background-color: $primary-color-light1;
+//             &:nth-child(even) {
+//                 background-color: $primary-color-light1;
+//             }
+//             &.title_wrap {
+//                 display: flex;
+//                 justify-content: center;
+//                 .title_group {
+//                 width: 66%;
+//                 }
+//             }
+//             .title {
+//                 font-weight: weight(bold);
+//                 &:hover {
+//                 color: $accent-color;
+//                 }
+//             }
+//             &.section_introduce {
+//                 .wrap_about {
+//                 display: flex;
+//                 li {
+//                     width: 300px;
+//                     height: 300px;
+//                     background-color: $primary-color-light1;
+//                     margin: 10px;
+//                 }
+//                 }
+//             }
+//             }
+//         }
+
+//         div.changing-title {
+//         font-size: 8vw;
+//         height: 1.2em;
+//         position: relative;
+//         left: 50%;
+//         width: 100%;
+//         overflow-y: hidden;
+//         transform: translate3d(0, 0, 0);
+//         transform: translateX(-50%);
+//         h1 {
+//           font-size: 1em;
+//           position: absolute;
+//           left: 19vw;
+//           top: 0;
+//           margin: 0;
+//           .letter {
+//             position: relative;
+//             top: 1.2em;
+//             &.in {
+//               animation-name: letter-in;
+//               animation-duration: 0.3s;
+//               animation-timing-function: ease-out;
+//               animation-fill-mode: forwards;
+//             }
+//             &.out {
+//               top: 0em;
+//               animation-name: letter-out;
+//               animation-duration: 0.3s;
+//               animation-timing-function: ease-in;
+//               animation-fill-mode: forwards;
+//             }
+//           }
+//         }
+//     }
+//     .section_skills {
+//         background: $primary-color-dark1;
+//         color: $text-color;
+//     }
+//     .skills_list {
+//         .item {
+//         .card {
+//             background: $primary-color-dark1;
+//             box-shadow: $shadow-card-dark-00;
+
+//             &.on {
+//             animation: cardAni-dark 1s linear forwards;
+//             }
+//         }
+//         @keyframes cardAni-dark {
+//             100% {
+//             background: $primary-color-dark1;
+//             box-shadow: $shadow-card-dark-100;
+//             }
+//         }
+//         .circle {
+//             box-shadow: $shadow-dark-circle;
+//             &::after {
+//             box-shadow: $shadow-dark-circle-inset;
+//             }
+//         }
+//         svg circle {
+//             fill: none;
+//             stroke: rgba(255,255,255,0.1);
+//             &:nth-child(2) {
+//             }
+//         }
+//         }
+//     }
+//     .tab_header {
+//         button {
+//         color: $text-color2;
+//         background: $primary-color-dark1;
+//         box-shadow: $shadow-btn-dark-off;
+//         &.on {
+//             background: $primary-color-dark1;
+//             box-shadow: $shadow-btn-dark-on
+//         }
+//         }
+//     }
+// }

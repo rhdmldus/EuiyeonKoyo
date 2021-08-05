@@ -150,8 +150,15 @@ btns.forEach((btn) => {
   });
 });
 
-let bar = document.querySelector('.bars')
-let nav = document.querySelector('.item_list')
-bar.addEventListener('click',(e) => {
-  nav.classList.toggle('on')
-})
+let bar = document.querySelector(".bars");
+let nav = document.querySelector(".item_list");
+bar.addEventListener("click", (e) => {
+  nav.classList.toggle("on");
+});
+// 다크모드스위치
+let switchGroup = document.querySelector(".switch_group");
+let body = document.querySelector("body");
+switchGroup.addEventListener("click", (e) => {
+  body.classList.toggle("dark");
+  e.currentTarget.classList.toggle("on");
+});
