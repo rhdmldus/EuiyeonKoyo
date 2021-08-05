@@ -1,5 +1,6 @@
 @import "./resets";
 @import "./variables";
+@import "./dark";
 
 @function weight($weight-name) {
   @return map-get($font-weight, $weight-name);
@@ -9,24 +10,27 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
-
-body {
-  background: $primary-color1;
-  color: $text-color;
-  font-family: $font-main;
-}
-
 .di_no {
   display: none !important;
 }
+
+body {
+  background: $primary-color-light1;
+  color: $text-color-dark;
+  font-family: $font-main;
+}
+
 .hippo {
+  position:absolute;
+  top:0;
+  left:0;
   display: inline-block;
   font-size: $font-large;
   text-align: center;
-  width: 130px;
+  width: 8.125rem;
   height: 80px;
-  background: $accent-color;
-  color: $text-color;
+  background: $text-color;
+  color: $accent-color;
   line-height: 80px;
   border: 1px soild #fff;
 }
@@ -37,13 +41,57 @@ body {
   z-index: 10;
   display: flex;
   width: 100%;
-  background-color: $primary-color1;
+  background-color: $primary-color-light1;
+  box-shadow: $shadow-nav-light-100;
+  .bars{
+    position:absolute;
+    top:0;right:0;
+    width:80px;height:80px;
+    font-size: $font-medium;
+    display:none;
+  }
+  .switch_group{
+    position: absolute;top:50%;right:30px;
+    transform: $move-y-center;
+    width:100px;
+    height:50px;
+    border-radius: 35px;
+    box-shadow: $shadow-nav-light-100;
+    font-size: $font-small;
+    background:$white-3;
+    
+    .theme_switch_input{
+      opacity:0;
+    }
+    .switch_label{
+      width:100%;
+      position:absolute;
+      top:50%;left:50%;
+      transform:$move-xy-center;
+      display:inline-block;
+      i{
+        opacity: 0.2;
+        position:absolute;
+        top:50%;
+        transform:$move-y-center;
+        &.fa-sun{
+          left:13px;
+        }
+        &.fa-moon{
+          right:13px;
+        }
+      }
+    }
+  }
   &.drop {
     position: fixed;
     animation-name: drop_down;
     animation-duration: 0.3s;
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    background: $nav-color;
+    .item_list {
+      .link {
+      }
+    }
   }
   .item_list {
     width: 100%;
@@ -54,11 +102,12 @@ body {
       display: inline-block;
       // width:100%;
       text-decoration: none;
-      color: $text-color;
+      color: $text-color-dark;
       padding: $padding-large;
       text-align: center;
       text-transform: uppercase;
       transition: all 0.5s;
+      font-weight:bold;
       &.on,
       &:hover {
         transform: translateY(10px);
@@ -75,7 +124,7 @@ body {
         opacity: 0;
         top: 5px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: $move-x-center;
         color: $accent-color;
       }
       span {
@@ -96,8 +145,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $primary-color-light1;
     &:nth-child(even) {
-      background-color: $primary-color2;
+      background-color: $primary-color-light1;
     }
     &.title_wrap {
       display: flex;
@@ -118,183 +168,14 @@ body {
         li {
           width: 300px;
           height: 300px;
-          background-color: $primary-color1;
+          background-color: $primary-color-light1;
           margin: 10px;
         }
       }
     }
   }
 }
-.section_skills {
-  background: #f0f0f0;
-  color: $text-color2;
-}
-.skills_list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  .item {
-    position: relative;
-    .card {
-      margin: 1rem;
-      overflow: hidden;
-      position: relative;
-      transition: all 3s;
-      width: 200px;
-      height: 300px;
-      border-radius: 20px;
-      background: #f0f0f0;
-      box-shadow: 0 0 0 $color-shadow, 0 0 0 $white,
-        10px 10px 10px $color-shadow inset, -10px -10px 10px $white inset;
-      &.on {
-        animation: cardAni 1s linear forwards;
-        // svg circle:nth-child(2){
-        //     animation:skill 3s linear forwards;
-        //     }
-        .circle.html {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 90 / 100);
-          }
-        }
-        .circle.css {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 89 / 100);
-          }
-        }
-        .circle.jq {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 80 / 100);
-          }
-        }
-        .circle.js {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 60 / 100);
-          }
-        }
-        .circle.ap {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 70 / 100);
-          }
-        }
-        .circle.github {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 85 / 100);
-          }
-        }
-      }
-    }
-    @keyframes cardAni {
-      100% {
-        width: 200px;
-        height: 300px;
-        background: $white-3;
-        box-shadow: 40px 40px 40px $color-shadow, 0 0 0 $white,
-          0 0 0 $color-shadow inset, 2px 2px 2px $white inset;
-      }
-    }
-    .circle {
-      color: #457b9d;
-      width: 75px;
-      height: 75px;
-      // border: 30px solid $white;
-      border-radius: 50%;
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: -4px -2px 4px 0px $white, 4px 2px 6px 0px $white-2;
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-        box-shadow: 2px 2px 2px 0px $white-2 inset,
-          -2px -2px 2px 0px $white inset;
-      }
-      &.html {
-        transition: stroke-dashoffset 3s;
-        svg circle:nth-child(2) {
-          stroke: #e55126;
-        }
-      }
-      &.css {
-        svg circle:nth-child(2) {
-          stroke: #0c73b8;
-        }
-      }
-      &.js {
-        svg circle:nth-child(2) {
-          stroke: #e5a228;
-        }
-      }
-      &.ap {
-        svg circle:nth-child(2) {
-          stroke: #01d5f5;
-        }
-      }
-      &.github {
-        svg circle:nth-child(2) {
-          stroke: #ff7800;
-        }
-      }
-    }
-    .pie {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-90deg);
-      width: 120px;
-      height: 120px;
-      position: relative;
-      border-radius: 50%;
-    }
-    svg circle {
-      fill: none;
-      stroke: $white-e;
-      stroke-width: 14;
-      stroke-dasharray: 333px;
-      stroke-dashoffset: 0;
-      &:nth-child(2) {
-        stroke-dasharray: calc(332px * 0.9);
-        stroke-dashoffset: 250;
-        stroke: #457b9d;
-        stroke-linecap: round;
-      }
-    }
-    @keyframes skill {
-      100% {
-        stroke-dashoffset: 0;
-      }
-    }
-    .counter {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-transform: uppercase;
-    }
-    .title {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-transform: uppercase;
-    }
-  }
-}
+
 div.changing-title {
   font-size: 8vw;
   height: 1.2em;
@@ -303,7 +184,7 @@ div.changing-title {
   width: 100%;
   overflow-y: hidden;
   transform: translate3d(0, 0, 0);
-  transform: translateX(-50%);
+  transform: $move-x-center;
   h1 {
     font-size: 1em;
     position: absolute;
@@ -354,13 +235,56 @@ div.changing-title {
   }
 }
 
+@media screen and (max-width: 902px) {
+  html {
+    font-size: 15px;
+  }
+  .nav {
+    .hippo{
+      width:80px;
+    }
+    .item_list {
+      position:fixed;
+      top:0;
+      left:-300px;
+      width:300px;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      background:$text-color-light;
+      transition: left 0.5s;
+      .link {
+        padding: $padding-medium;
+      }
+      &.on{
+        top:0;
+        left:0;
+        .link{
+          margin-left:25px;
+          i {
+            opacity: 1;
+            position: absolute;
+            top: 50%;
+            left:0;
+            transform: $move-y-center;
+            color: $accent-color;
+          }
+
+        }
+      }
+    }
+    .bars{
+      display:block;
+    }
+
+  }
+}
 @media screen and (max-width: 768px) {
   html {
     font-size: 14px;
   }
-  .nav .item_list .link {
-    padding: $padding-medium;
-  }
+  
+  
 }
 
 .tab_header {
@@ -368,10 +292,9 @@ div.changing-title {
   position: absolute;
   top: 200px;
   left: 50%;
-  transform: translatex(-50%);
+  transform: $move-x-center;
   button {
     color: $text-color2;
-    border: 0;
     display: inline-block;
     width: 100px;
     height: 50px;
@@ -389,3 +312,175 @@ div.changing-title {
     }
   }
 }
+
+.section_skills {
+  background: #f0f0f0;
+  color: $text-color2;
+}
+.skills_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .item {
+    position: relative;
+    .card {
+      margin: 1rem;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 3s;
+      width: 200px;
+      height: 300px;
+      border-radius: 20px;
+      background: #f0f0f0;
+      box-shadow: $shadow-card-light-00;
+      &.on {
+        animation: cardAni-light 1s linear forwards;
+        // svg circle:nth-child(2){
+        //     animation:skill 3s linear forwards;
+        //     }
+        .circle.html {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 90 / 100);
+          }
+        }
+        .circle.css {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 89 / 100);
+          }
+        }
+        .circle.jq {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 80 / 100);
+          }
+        }
+        .circle.js {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 60 / 100);
+          }
+        }
+        .circle.ap {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 70 / 100);
+          }
+        }
+        .circle.github {
+          svg circle:nth-child(2) {
+            transition: stroke-dashoffset 3s;
+            stroke-dashoffset: calc(332px - 332px * 85 / 100);
+          }
+        }
+      }
+    }
+    @keyframes cardAni-light {
+      100% {
+        width: 200px;
+        height: 300px;
+        background: $white-3;
+        box-shadow: $shadow-card-light-100;
+      }
+    }
+    .circle {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: $move-xy-center;
+      box-shadow: $shadow-light-circle;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: $move-xy-center;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        box-shadow: $shadow-light-circle-inset
+      }
+      &.html {
+        transition: stroke-dashoffset 3s;
+        svg circle:nth-child(2) {
+          stroke: #e55126;
+        }
+      }
+      &.css {
+        svg circle:nth-child(2) {
+          stroke: #0c73b8;
+        }
+      }
+      &.js {
+        svg circle:nth-child(2) {
+          stroke: #e5a228;
+        }
+      }
+      &.jq {
+        svg circle:nth-child(2) {
+          stroke: #0769AD;
+        }
+      }
+      &.ap {
+        svg circle:nth-child(2) {
+          stroke: #01d5f5;
+        }
+      }
+      &.github {
+        svg circle:nth-child(2) {
+          stroke: #ff7800;
+        }
+      }
+    }
+    .pie {
+      top: 50%;
+      left: 50%;
+      transform: $move-xy-center rotate(-90deg);
+      width: 120px;
+      height: 120px;
+      position: relative;
+      border-radius: 50%;
+    }
+    svg circle {
+      fill: none;
+      stroke: $white-e;
+      stroke-width: 14;
+      stroke-dasharray: 333px;
+      stroke-dashoffset: 0;
+      &:nth-child(2) {
+        stroke-dasharray: calc(332px * 0.9);
+        stroke-dashoffset: 250;
+        stroke: #457b9d;
+        stroke-linecap: round;
+      }
+    }
+    @keyframes skill {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+    .counter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: $move-xy-center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+    }
+    .title {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: $move-x-center;
+      text-transform: uppercase;
+    }
+  }
+}
+

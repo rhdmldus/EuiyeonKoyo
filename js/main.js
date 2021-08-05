@@ -149,3 +149,9 @@ btns.forEach((btn) => {
     content.classList.remove("di_no");
   });
 });
+
+let bar = document.querySelector('.bars')
+let nav = document.querySelector('.item_list')
+bar.addEventListener('click',(e) => {
+  nav.classList.toggle('on')
+})
