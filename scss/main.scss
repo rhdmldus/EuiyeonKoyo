@@ -18,6 +18,7 @@ body {
   background: $primary-color-light1;
   color: $text-color-dark;
   font-family: $font-main;
+<<<<<<< Updated upstream
 }
 
 .hippo {
@@ -112,69 +113,408 @@ body {
       &:hover {
         transform: translateY(10px);
         color: $accent-color;
-        i {
-          opacity: 1;
-          transition: all 0.5s;
-          top: 10px;
-        }
-      }
-      i {
-        font-size: $font-small;
-        position: absolute;
-        opacity: 0;
-        top: 5px;
-        left: 50%;
-        transform: $move-x-center;
-        color: $accent-color;
-      }
-      span {
-        font-size: $font-small;
-      }
-    }
-  }
-}
-.main {
-  width: 100%;
-  margin: 0 auto;
-
-  section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+=======
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 80px;
+    width: 100%;
     background-color: $primary-color-light1;
-    &:nth-child(even) {
-      background-color: $primary-color-light1;
+    box-shadow: $shadow-nav-light-100;
+    .hippo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      font-size: $font-large;
+      text-align: center;
+      width: 8.125rem;
+      height: 80px;
+      background: $text-color;
+      color: $accent-color;
+      line-height: 80px;
+      border: 1px soild #fff;
     }
-    &.title_wrap {
+    .item_list {
+      width: 100%;
       display: flex;
       justify-content: center;
+      .link {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        color: $text-color-dark;
+        padding: $padding-large;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.5s;
+        font-weight: bold;
+        i {
+          font-size: $font-small;
+          position: absolute;
+          opacity: 0;
+          top: 5px;
+          left: 50%;
+          transform: $move-x-center;
+          color: $accent-color;
+        }
+        span {
+          font-size: $font-small;
+        }
+        &.on,
+        &:hover {
+          transform: translateY(10px);
+          color: $accent-color;
+          i {
+            opacity: 1;
+            transition: all 0.5s;
+            top: 10px;
+          }
+        }
+      }
+    }
+    .bars {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      font-size: $font-medium;
+      display: none;
+    }
+    .switch_group {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: $move-y-center;
+      width: 100px;
+      height: 50px;
+      border-radius: 35px;
+      box-shadow: $shadow-nav-light-100;
+      font-size: $font-small;
+      background: rgba(0,0,0,0.2);
+  
+      .theme_switch_input {
+        opacity: 0;
+      }
+      .switch_label {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: $move-xy-center;
+        display: inline-block;
+>>>>>>> Stashed changes
+        i {
+          opacity:0.5;
+          position: absolute;
+          top: 50%;
+          transform: $move-y-center;
+          &.fa-sun {
+            left: 13px;
+          }
+          &.fa-moon {
+            right: 13px;
+          }
+        }
+      }
+      &::after {
+        content: "";
+        transition: transform 0.5s;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: $move-y-center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: $shadow-light-circle;
+      }
+      &.on {
+        &::after {
+          transform: translate(50px, -50%);
+        }
+      }
+    }
+    &.drop {
+      position: fixed;
+      animation-name: drop_down;
+      animation-duration: 0.3s;
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      .item_list {
+        .link {
+        }
+      }
+    }
+  }
+  .main {
+    width: 100%;
+    margin: 0 auto;
+    section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+<<<<<<< Updated upstream
       .title_group {
         width: 66%;
+=======
+      align-items: center;
+      background-color: $primary-color-light1;
+      &:nth-child(even) {
+        background-color: $primary-color-light1;
       }
-    }
-    .title {
-      font-weight: weight(bold);
-      &:hover {
-        color: $accent-color;
+      .title {
+        font-weight: weight(bold);
+        &:hover {
+          color: $accent-color;
+        }
       }
-    }
-    &.section_introduce {
-      .wrap_about {
+      &.title_wrap {
         display: flex;
-        li {
-          width: 300px;
-          height: 300px;
-          background-color: $primary-color-light1;
-          margin: 10px;
+        justify-content: center;
+        .title_group {
+          width: 66%;
+          div.changing-title {
+            font-size: 8vw;
+            height: 1.2em;
+            position: relative;
+            left: 50%;
+            width: 100%;
+            overflow-y: hidden;
+            transform: translate3d(0, 0, 0);
+            transform: $move-x-center;
+            h1 {
+              font-size: 1em;
+              position: absolute;
+              left: 19vw;
+              top: 0;
+              margin: 0;
+              .letter {
+                position: relative;
+                top: 1.2em;
+                &.in {
+                  animation-name: letter-in;
+                  animation-duration: 0.3s;
+                  animation-timing-function: ease-out;
+                  animation-fill-mode: forwards;
+                }
+                &.out {
+                  top: 0em;
+                  animation-name: letter-out;
+                  animation-duration: 0.3s;
+                  animation-timing-function: ease-in;
+                  animation-fill-mode: forwards;
+                }
+              }
+            }
+          }
+        }
+>>>>>>> Stashed changes
+      }
+      &.section_introduce {
+        .wrap_about {
+          display: flex;
+          li {
+            width: 300px;
+            height: 300px;
+            background-color: $primary-color-light1;
+            margin: 10px;
+          }
+        }
+      }
+      &.section_skills {
+        background: #f0f0f0;
+        color: $text-color2;
+        .tab_header {
+          display: flex;
+          // position: absolute;
+          // top: 200px;
+          // left: 50%;
+          // transform: $move-x-center;
+          button {
+            color: $text-color2;
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            margin: 20px;
+            border-radius: 20px;
+            background: $white-3;
+            box-shadow: 10px 10px 10px $color-shadow, 0 0 $white,
+              0 0 0 $color-shadow inset, 1px 1px 1px $white inset;
+            &.on {
+              background: #f0f0f0;
+              box-shadow: 0 0 0 $color-shadow, 0 0 0 $white,
+                5px 5px 5px $color-shadow inset, -5px -5px 5px $white inset;
+            }
+          }
+        }
+        .skills_list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          .item {
+            position: relative;
+            .card {
+              margin: 1rem;
+              overflow: hidden;
+              position: relative;
+              transition: box-shadow 3s;
+              width: 200px;
+              height: 300px;
+              border-radius: 20px;
+              background: #f0f0f0;
+              box-shadow: $shadow-card-light-00;
+              &.on {
+                animation: cardAni-light 1s linear forwards;
+                // svg circle:nth-child(2){
+                //     animation:skill 3s linear forwards;
+                //     }
+                .circle.html {
+                  svg circle:nth-child(2) {
+                    transition: stroke-dashoffset 3s;
+                    stroke-dashoffset: calc(332px - 332px * 90 / 100);
+                  }
+                }
+                .circle.css {
+                  svg circle:nth-child(2) {
+                    transition: stroke-dashoffset 3s;
+                    stroke-dashoffset: calc(332px - 332px * 89 / 100);
+                  }
+                }
+                .circle.jq {
+                  svg circle:nth-child(2) {
+                    transition: stroke-dashoffset 3s;
+                    stroke-dashoffset: calc(332px - 332px * 80 / 100);
+                  }
+                }
+                .circle.js {
+                  svg circle:nth-child(2) {
+                    transition: stroke-dashoffset 3s;
+                    stroke-dashoffset: calc(332px - 332px * 60 / 100);
+                  }
+                }
+                .circle.ap {
+                  svg circle:nth-child(2) {
+                    transition: stroke-dashoffset 3s;
+                    stroke-dashoffset: calc(332px - 332px * 70 / 100);
+                  }
+                }
+                .circle.github {
+                  svg circle:nth-child(2) {
+                    transition: stroke-dashoffset 3s;
+                    stroke-dashoffset: calc(332px - 332px * 85 / 100);
+                  }
+                }
+              }
+            }
+            .circle {
+              width: 75px;
+              height: 75px;
+              border-radius: 50%;
+              position: relative;
+              top: 50%;
+              left: 50%;
+              transform: $move-xy-center;
+              box-shadow: $shadow-light-circle;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: $move-xy-center;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                box-shadow: $shadow-light-circle-inset;
+              }
+              &.html {
+                transition: stroke-dashoffset 3s;
+                svg circle:nth-child(2) {
+                  stroke: #e55126;
+                }
+              }
+              &.css {
+                svg circle:nth-child(2) {
+                  stroke: #0c73b8;
+                }
+              }
+              &.js {
+                svg circle:nth-child(2) {
+                  stroke: #e5a228;
+                }
+              }
+              &.jq {
+                svg circle:nth-child(2) {
+                  stroke: #0769ad;
+                }
+              }
+              &.ap {
+                svg circle:nth-child(2) {
+                  stroke: #01d5f5;
+                }
+              }
+              &.github {
+                svg circle:nth-child(2) {
+                  stroke: #ff7800;
+                }
+              }
+            }
+            .pie {
+              top: 50%;
+              left: 50%;
+              transform: $move-xy-center rotate(-90deg);
+              width: 120px;
+              height: 120px;
+              position: relative;
+              border-radius: 50%;
+            }
+            svg circle {
+              fill: none;
+              stroke: $white-e;
+              stroke-width: 14;
+              stroke-dasharray: 333px;
+              stroke-dashoffset: 0;
+              &:nth-child(2) {
+                stroke-dasharray: calc(332px * 0.9);
+                stroke-dashoffset: 250;
+                stroke: #457b9d;
+                stroke-linecap: round;
+              }
+            }
+            .counter {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: $move-xy-center;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-transform: uppercase;
+            }
+            .title {
+              position: absolute;
+              top: 20px;
+              left: 50%;
+              transform: $move-x-center;
+              text-transform: uppercase;
+            }
+          }
         }
       }
     }
   }
 }
+<<<<<<< Updated upstream
 
 div.changing-title {
   font-size: 8vw;
@@ -210,6 +550,10 @@ div.changing-title {
     }
   }
 }
+=======
+// start animation
+// header drop
+>>>>>>> Stashed changes
 @keyframes drop_down {
   0% {
     top: -90px;
@@ -218,6 +562,7 @@ div.changing-title {
     top: 0;
   }
 }
+// title letter animation
 @keyframes letter-in {
   0% {
     top: 1.2em;
@@ -234,11 +579,53 @@ div.changing-title {
     top: -1.2em;
   }
 }
+@keyframes cardAni-light {
+  100% {
+    background: $white-3;
+    box-shadow: $shadow-card-light-100;
+  }
+}
+@keyframes cardAni-dark {
+  100% {
+    background: $primary-color-dark1;
+    box-shadow: $shadow-card-dark-100;
+  }
+}
+@keyframes skill {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 
+// end animation
+
+
+
+
+
+
+<<<<<<< Updated upstream
+=======
+@media screen and (max-width: 1026px) {
+  html {
+    font-size: 15px;
+  }
+  body{
+    .nav {
+      .item_list {
+        .link {
+          padding: $padding-small;
+          }
+        }
+      }
+    }
+  }
+>>>>>>> Stashed changes
 @media screen and (max-width: 902px) {
   html {
     font-size: 15px;
   }
+<<<<<<< Updated upstream
   .nav {
     .hippo{
       width:80px;
@@ -268,10 +655,44 @@ div.changing-title {
             left:0;
             transform: $move-y-center;
             color: $accent-color;
+=======
+  body {
+    .nav {
+      .hippo {
+        width: 80px;
+      }
+      .item_list {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: $text-color-light;
+        transition: left 0.5s;
+        .link {
+          padding: $padding-small;
+        }
+        &.on {
+          top: 0;
+          left: 0;
+          .link {
+            margin-left: 25px;
+            i {
+              opacity: 1;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: $move-y-center;
+              color: $accent-color;
+            }
+>>>>>>> Stashed changes
           }
 
         }
       }
+<<<<<<< Updated upstream
     }
     .bars{
       display:block;
@@ -342,40 +763,150 @@ div.changing-title {
           svg circle:nth-child(2) {
             transition: stroke-dashoffset 3s;
             stroke-dashoffset: calc(332px - 332px * 90 / 100);
-          }
-        }
-        .circle.css {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 89 / 100);
-          }
-        }
-        .circle.jq {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 80 / 100);
-          }
-        }
-        .circle.js {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 60 / 100);
-          }
-        }
-        .circle.ap {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 70 / 100);
-          }
-        }
-        .circle.github {
-          svg circle:nth-child(2) {
-            transition: stroke-dashoffset 3s;
-            stroke-dashoffset: calc(332px - 332px * 85 / 100);
+=======
+      .bars {
+        display: block;
+      }
+      .switch_group {
+        display: none;
+      }
+      &.drop {
+        .item_list {
+          .link {
+>>>>>>> Stashed changes
           }
         }
       }
     }
+    .main {
+      section {
+        &:nth-child(even) {
+        }
+        .title {
+          &:hover {
+          }
+        }
+        &.title_wrap {
+          .title_group {
+            div.changing-title {
+              h1 {
+                .letter {
+                  &.in {
+                  }
+                  &.out {
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.section_introduce {
+          .wrap_about {
+            li {
+            }
+          }
+        }
+        &.section_skills {
+          .tab_header {
+            button {
+              &.on {
+              }
+            }
+          }
+          .skills_list {
+            .item {
+              .card {
+                width:100px;height:130px;
+                &.on {
+                  .circle.html {
+                    svg circle:nth-child(2) {
+                      transition: stroke-dashoffset 3s;
+                      stroke-dashoffset: calc(150px - 150px * 90 / 100);
+                    }
+                  }
+                  .circle.css {
+                    svg circle:nth-child(2) {
+                      transition: stroke-dashoffset 3s;
+                      stroke-dashoffset: calc(150px - 150px * 89 / 100);
+                    }
+                  }
+                  .circle.jq {
+                    svg circle:nth-child(2) {
+                      transition: stroke-dashoffset 3s;
+                      stroke-dashoffset: calc(150px - 150px * 80 / 100);
+                    }
+                  }
+                  .circle.js {
+                    svg circle:nth-child(2) {
+                      transition: stroke-dashoffset 3s;
+                      stroke-dashoffset: calc(150px - 150px * 60 / 100);
+                    }
+                  }
+                  .circle.ap {
+                    svg circle:nth-child(2) {
+                      transition: stroke-dashoffset 3s;
+                      stroke-dashoffset: calc(150px - 150px * 70 / 100);
+                    }
+                  }
+                  .circle.github {
+                    svg circle:nth-child(2) {
+                      transition: stroke-dashoffset 3s;
+                      stroke-dashoffset: calc(150px - 150px * 85 / 100);
+                    }
+                  }
+                }
+              }
+              .circle {
+                width: 45px;
+                height: 45px;
+                transform: translate(-50%, -15%);
+                &::after {
+                }
+                &.html {
+                  svg circle:nth-child(2) {
+                  }
+                }
+                &.css {
+                  svg circle:nth-child(2) {
+                  }
+                }
+                &.js {
+                  svg circle:nth-child(2) {
+                  }
+                }
+                &.jq {
+                  svg circle:nth-child(2) {
+                  }
+                }
+                &.ap {
+                  svg circle:nth-child(2) {
+                  }
+                }
+                &.github {
+                  svg circle:nth-child(2) {
+                  }
+                }
+              }
+              .pie {
+              }
+              svg circle {
+                stroke-width: 10;
+                &:nth-child(2) {
+                  stroke-dasharray: calc(188 * 0.9);
+                  stroke-dashoffset: 150;
+                }
+              }
+              .counter {
+              }
+              .title {
+                font-size: $font-small;
+              }
+            }
+          }
+        }
+      }
+    }
+<<<<<<< Updated upstream
     @keyframes cardAni-light {
       100% {
         width: 200px;
@@ -484,3 +1015,12 @@ div.changing-title {
   }
 }
 
+=======
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+>>>>>>> Stashed changes

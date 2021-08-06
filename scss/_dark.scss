@@ -1,6 +1,7 @@
 .dark{
     background: $primary-color-dark1;
     color: $text-color;
+<<<<<<< Updated upstream
     .hippo {
         display: inline-block;
         font-size: $font-large;
@@ -11,6 +12,59 @@
         color: $accent-color;
         line-height: 80px;
         border: 1px soild #fff;
+=======
+    border: 1px soild #fff;
+  }
+  .nav {
+    background-color: $primary-color-dark1;
+    box-shadow: $shadow-nav-dark-100;
+    .bars {
+      color: $text-color-light;
+    }
+    .switch_group {
+      box-shadow: $shadow-nav-light-100;
+      background: $light-shadow;
+
+      .theme_switch_input {
+      }
+      .switch_label {
+        i {
+        opacity:0.8;
+          &.fa-sun {
+          }
+          &.fa-moon {
+          }
+        }
+      }
+      &::after {
+        background: $primary-color-dark1;
+        box-shadow: $shadow-dark-circle;
+      }
+      &.on {
+        &::after {
+        }
+      }
+    }
+    &.drop {
+      .item_list {
+        .link {
+        }
+      }
+    }
+    .item_list {
+      .link {
+        color: $text-color-light;
+        &.on,
+        &:hover {
+          color: $accent-color;
+          i {
+          }
+        }
+        i {
+          color: $accent-color;
+        }
+        span {
+>>>>>>> Stashed changes
         }
         .nav {
             position: absolute;
@@ -66,6 +120,7 @@
             }
             }
         }
+<<<<<<< Updated upstream
         .main {
             width: 100%;
             margin: 0 auto;
@@ -107,6 +162,64 @@
                 }
             }
             }
+=======
+      }
+      &.section_skills {
+        background: $primary-color-dark1;
+        color: $text-color-light;
+        .tab_header {
+          button {
+            color: $text-color-light;
+            background: $primary-color-dark1;
+            box-shadow: $shadow-btn-dark-off;
+            &.on {
+              background: $primary-color-dark1;
+              box-shadow: $shadow-btn-dark-on;
+            }
+          }
+        }
+        .skills_list {
+          .item {
+            .card {
+              background: $primary-color-dark1;
+              box-shadow: $shadow-card-dark-00;
+              &.on {
+                animation: cardAni-dark 1s linear forwards;
+              }
+            }
+            .circle {
+              box-shadow: $shadow-dark-circle;
+              &::after {
+                box-shadow: $shadow-dark-circle-inset;
+              }
+            }
+            .pie {
+            }
+            svg circle {
+              stroke: $dark-shadow;
+              &:nth-child(2) {
+                stroke: #457b9d;
+              }
+            }
+            .counter {
+            }
+            .title {
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 902px) {
+    html {
+    }
+    .nav {
+      .hippo {
+      }
+      .item_list {
+        background: $primary-color-dark2;
+        .link {
+>>>>>>> Stashed changes
         }
         
         div.changing-title {
@@ -143,6 +256,7 @@
           }
         }
     }
+<<<<<<< Updated upstream
     .section_skills {
         background: $primary-color-dark1;
         color: $text-color;
@@ -189,3 +303,9 @@
         }
     }
 }
+=======
+  }
+
+
+}
+>>>>>>> Stashed changes

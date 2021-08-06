@@ -128,9 +128,6 @@ for (let i = 0; i < cards.length; i++) {
   });
 }
 
-let circle = document.querySelector("circle");
-console.log(circle.getTotalLength());
-
 let btns = document.querySelectorAll(".tab_header .btn");
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -150,8 +147,34 @@ btns.forEach((btn) => {
   });
 });
 
+<<<<<<< Updated upstream
 let bar = document.querySelector('.bars')
 let nav = document.querySelector('.item_list')
 bar.addEventListener('click',(e) => {
   nav.classList.toggle('on')
 })
+=======
+let bar = document.querySelector(".bars");
+let nav = document.querySelector(".item_list");
+bar.addEventListener("click", (e) => {
+  nav.classList.toggle("on");
+});
+// 다크모드스위치
+let switchGroup = document.querySelector(".switch_group");
+let body = document.querySelector("body");
+switchGroup.addEventListener("click", (e) => {
+  body.classList.toggle("dark");
+  e.currentTarget.classList.toggle("on");
+});
+// let circles = document.querySelectorAll("circle")
+// if (window.matchMedia("(max-width: 400px)").matches) {
+//   circles.forEach(circle => {
+//     circle.setAttribute('r', '30')
+// })
+// } else {
+//   console.log('oo')
+// //   circles.forEach(circle => {
+// //     circle.setAttribute('r', '53')
+// // })
+// }
+>>>>>>> Stashed changes
