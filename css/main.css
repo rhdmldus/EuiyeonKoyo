@@ -38,7 +38,7 @@ button {
 .dark .nav .switch_group {
   -webkit-box-shadow: 0 2px 4px 0 rgba(151, 145, 151, 0.1);
           box-shadow: 0 2px 4px 0 rgba(151, 145, 151, 0.1);
-  background: #131f24;
+  background: rgba(0, 0, 0, 0.541);
 }
 
 .dark .nav .switch_group .switch_label i {
@@ -88,66 +88,50 @@ button {
   }
 }
 
-.dark .tab_header button {
+.dark .section_skills {
+  background: #131f24;
+  color: #fcde67;
+}
+
+.dark .section_skills .tab_header button {
   color: #fcde67;
   background: #131f24;
   -webkit-box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px rgba(0, 0, 0, 0.541), -5px -5px 5px rgba(255, 255, 255, 0.226) inset;
           box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px rgba(0, 0, 0, 0.541), -5px -5px 5px rgba(255, 255, 255, 0.226) inset;
 }
 
-.dark .tab_header button.on {
+.dark .section_skills .tab_header button.on {
   background: #131f24;
   -webkit-box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px rgba(255, 255, 255, 0.226) inset, -5px -5px 5px rgba(0, 0, 0, 0.541) inset;
           box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px rgba(255, 255, 255, 0.226) inset, -5px -5px 5px rgba(0, 0, 0, 0.541) inset;
 }
 
-.dark .section_skills {
-  background: #131f24;
-  color: #fcde67;
-}
-
-.dark .skills_list .item .card {
+.dark .section_skills .skill_content .skills_list .item .card {
   background: #131f24;
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.541), 0 0 0 rgba(0, 0, 0, 0.541) inset, 10px 10px 10px rgba(0, 0, 0, 0.541) inset, -10px -10px 10px rgba(255, 255, 255, 0.226) inset;
           box-shadow: 0 0 0 rgba(0, 0, 0, 0.541), 0 0 0 rgba(0, 0, 0, 0.541) inset, 10px 10px 10px rgba(0, 0, 0, 0.541) inset, -10px -10px 10px rgba(255, 255, 255, 0.226) inset;
 }
 
-.dark .skills_list .item .card.on {
+.dark .section_skills .skill_content .skills_list .item .card.on {
   -webkit-animation: cardAni-dark 1s linear forwards;
           animation: cardAni-dark 1s linear forwards;
 }
 
-@-webkit-keyframes cardAni-dark {
-  100% {
-    background: #131f24;
-    -webkit-box-shadow: 0 0 0 #fff, 0 0 0 #fff inset, 40px 40px 40px rgba(0, 0, 0, 0.541), 2px 2px 2px rgba(255, 255, 255, 0.226) inset;
-            box-shadow: 0 0 0 #fff, 0 0 0 #fff inset, 40px 40px 40px rgba(0, 0, 0, 0.541), 2px 2px 2px rgba(255, 255, 255, 0.226) inset;
-  }
-}
-
-@keyframes cardAni-dark {
-  100% {
-    background: #131f24;
-    -webkit-box-shadow: 0 0 0 #fff, 0 0 0 #fff inset, 40px 40px 40px rgba(0, 0, 0, 0.541), 2px 2px 2px rgba(255, 255, 255, 0.226) inset;
-            box-shadow: 0 0 0 #fff, 0 0 0 #fff inset, 40px 40px 40px rgba(0, 0, 0, 0.541), 2px 2px 2px rgba(255, 255, 255, 0.226) inset;
-  }
-}
-
-.dark .skills_list .item .circle {
+.dark .section_skills .skill_content .skills_list .item .circle {
   -webkit-box-shadow: -4px -2px 4px 0px rgba(255, 255, 255, 0.226), 4px 2px 6px 0px rgba(0, 0, 0, 0.541);
           box-shadow: -4px -2px 4px 0px rgba(255, 255, 255, 0.226), 4px 2px 6px 0px rgba(0, 0, 0, 0.541);
 }
 
-.dark .skills_list .item .circle::after {
+.dark .section_skills .skill_content .skills_list .item .circle::after {
   -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.541) inset, -2px -2px 2px 0px rgba(255, 255, 255, 0.226) inset;
           box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.541) inset, -2px -2px 2px 0px rgba(255, 255, 255, 0.226) inset;
 }
 
-.dark .skills_list .item svg circle {
+.dark .section_skills .skill_content .skills_list .item svg circle {
   stroke: rgba(0, 0, 0, 0.541);
 }
 
-.dark .skills_list .item svg circle:nth-child(2) {
+.dark .section_skills .skill_content .skills_list .item svg circle:nth-child(2) {
   stroke: #457b9d;
 }
 
@@ -218,7 +202,7 @@ body {
   -webkit-box-shadow: 0 2px 4px 0 rgba(151, 145, 151, 0.1);
           box-shadow: 0 2px 4px 0 rgba(151, 145, 151, 0.1);
   font-size: 1rem;
-  background: #f5f6f7;
+  background: #eee;
 }
 
 .nav .switch_group .theme_switch_input {
@@ -236,7 +220,7 @@ body {
 }
 
 .nav .switch_group .switch_label i {
-  opacity: 0.2;
+  opacity: 0.6;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -365,7 +349,15 @@ body {
   background-color: #ffffff;
 }
 
-.main section.title_wrap {
+.main section .title {
+  font-weight: 700;
+}
+
+.main section .title:hover {
+  color: #5bccf6;
+}
+
+.title_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,11 +366,11 @@ body {
           justify-content: center;
 }
 
-.main section.title_wrap .title_group {
+.title_wrap .title_group {
   width: 66%;
 }
 
-.main section.title_wrap .title_group div.changing-title {
+.title_wrap .title_group div.changing-title {
   font-size: 8vw;
   height: 1.2em;
   position: relative;
@@ -391,7 +383,7 @@ body {
           transform: translateX(-50%);
 }
 
-.main section.title_wrap .title_group div.changing-title h1 {
+.title_wrap .title_group div.changing-title h1 {
   font-size: 1em;
   position: absolute;
   left: 19vw;
@@ -399,12 +391,12 @@ body {
   margin: 0;
 }
 
-.main section.title_wrap .title_group div.changing-title h1 .letter {
+.title_wrap .title_group div.changing-title h1 .letter {
   position: relative;
   top: 1.2em;
 }
 
-.main section.title_wrap .title_group div.changing-title h1 .letter.in {
+.title_wrap .title_group div.changing-title h1 .letter.in {
   -webkit-animation-name: letter-in;
           animation-name: letter-in;
   -webkit-animation-duration: 0.3s;
@@ -415,7 +407,7 @@ body {
           animation-fill-mode: forwards;
 }
 
-.main section.title_wrap .title_group div.changing-title h1 .letter.out {
+.title_wrap .title_group div.changing-title h1 .letter.out {
   top: 0em;
   -webkit-animation-name: letter-out;
           animation-name: letter-out;
@@ -427,25 +419,305 @@ body {
           animation-fill-mode: forwards;
 }
 
-.main section .title {
-  font-weight: 700;
+.section_introduce .wrap_about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.main section .title:hover {
-  color: #5bccf6;
+.section_introduce .wrap_about li {
+  width: 300px;
+  height: 300px;
+  background-color: #ffffff;
+  margin: 10px;
 }
 
-.main section.section_introduce .wrap_about {
+.section_skills {
+  background: #f0f0f0;
+  color: #457b9d;
+}
+
+.section_skills .tab_header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.main section.section_introduce .wrap_about li {
-  width: 300px;
+.section_skills .tab_header button {
+  color: #457b9d;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 20px;
+  border-radius: 20px;
+  background: #f5f6f7;
+  -webkit-box-shadow: 10px 10px 10px #ccc, 0 0 #fff, 0 0 0 #ccc inset, 1px 1px 1px #fff inset;
+          box-shadow: 10px 10px 10px #ccc, 0 0 #fff, 0 0 0 #ccc inset, 1px 1px 1px #fff inset;
+}
+
+.section_skills .tab_header button.on {
+  background: #f0f0f0;
+  -webkit-box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px #ccc inset, -5px -5px 5px #fff inset;
+          box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px #ccc inset, -5px -5px 5px #fff inset;
+}
+
+.section_skills .skill_content .skills_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_skills .skill_content .skills_list .item {
+  position: relative;
+}
+
+.section_skills .skill_content .skills_list .item .card {
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: -webkit-box-shadow 3s;
+  transition: -webkit-box-shadow 3s;
+  transition: box-shadow 3s;
+  transition: box-shadow 3s, -webkit-box-shadow 3s;
+  width: 200px;
   height: 300px;
-  background-color: #ffffff;
-  margin: 10px;
+  border-radius: 20px;
+  background: #f0f0f0;
+  -webkit-box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 10px 10px 10px #ccc inset, -10px -10px 10px #fff inset;
+          box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 10px 10px 10px #ccc inset, -10px -10px 10px #fff inset;
+}
+
+.section_skills .skill_content .skills_list .item .card.on {
+  -webkit-animation: cardAni-light 1s linear forwards;
+          animation: cardAni-light 1s linear forwards;
+}
+
+.section_skills .skill_content .skills_list .item .card.on .circle.html svg circle:nth-child(2) {
+  -webkit-transition: stroke-dashoffset 3s;
+  transition: stroke-dashoffset 3s;
+  stroke-dashoffset: calc(332px - 332px * 90 / 100);
+}
+
+.section_skills .skill_content .skills_list .item .card.on .circle.css svg circle:nth-child(2) {
+  -webkit-transition: stroke-dashoffset 3s;
+  transition: stroke-dashoffset 3s;
+  stroke-dashoffset: calc(332px - 332px * 89 / 100);
+}
+
+.section_skills .skill_content .skills_list .item .card.on .circle.jq svg circle:nth-child(2) {
+  -webkit-transition: stroke-dashoffset 3s;
+  transition: stroke-dashoffset 3s;
+  stroke-dashoffset: calc(332px - 332px * 80 / 100);
+}
+
+.section_skills .skill_content .skills_list .item .card.on .circle.js svg circle:nth-child(2) {
+  -webkit-transition: stroke-dashoffset 3s;
+  transition: stroke-dashoffset 3s;
+  stroke-dashoffset: calc(332px - 332px * 60 / 100);
+}
+
+.section_skills .skill_content .skills_list .item .card.on .circle.ap svg circle:nth-child(2) {
+  -webkit-transition: stroke-dashoffset 3s;
+  transition: stroke-dashoffset 3s;
+  stroke-dashoffset: calc(332px - 332px * 70 / 100);
+}
+
+.section_skills .skill_content .skills_list .item .card.on .circle.github svg circle:nth-child(2) {
+  -webkit-transition: stroke-dashoffset 3s;
+  transition: stroke-dashoffset 3s;
+  stroke-dashoffset: calc(332px - 332px * 85 / 100);
+}
+
+.section_skills .skill_content .skills_list .item .circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: -4px -2px 4px 0px #fff, 4px 2px 6px 0px #dfe4ea;
+          box-shadow: -4px -2px 4px 0px #fff, 4px 2px 6px 0px #dfe4ea;
+}
+
+.section_skills .skill_content .skills_list .item .circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 2px 2px 2px 0px #dfe4ea inset, -2px -2px 2px 0px #fff inset;
+          box-shadow: 2px 2px 2px 0px #dfe4ea inset, -2px -2px 2px 0px #fff inset;
+}
+
+.section_skills .skill_content .skills_list .item .circle.html {
+  -webkit-transition: stroke-dashoffset 3s;
+  transition: stroke-dashoffset 3s;
+}
+
+.section_skills .skill_content .skills_list .item .circle.html svg circle:nth-child(2) {
+  stroke: #e55126;
+}
+
+.section_skills .skill_content .skills_list .item .circle.css svg circle:nth-child(2) {
+  stroke: #0c73b8;
+}
+
+.section_skills .skill_content .skills_list .item .circle.js svg circle:nth-child(2) {
+  stroke: #e5a228;
+}
+
+.section_skills .skill_content .skills_list .item .circle.jq svg circle:nth-child(2) {
+  stroke: #0769ad;
+}
+
+.section_skills .skill_content .skills_list .item .circle.ap svg circle:nth-child(2) {
+  stroke: #01d5f5;
+}
+
+.section_skills .skill_content .skills_list .item .circle.github svg circle:nth-child(2) {
+  stroke: #ff7800;
+}
+
+.section_skills .skill_content .skills_list .item .pie {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.section_skills .skill_content .skills_list .item svg circle {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 14;
+  stroke-dasharray: 333px;
+  stroke-dashoffset: 0;
+}
+
+.section_skills .skill_content .skills_list .item svg circle:nth-child(2) {
+  stroke-dasharray: calc(332px * 0.9);
+  stroke-dashoffset: 250;
+  stroke: #457b9d;
+  stroke-linecap: round;
+}
+
+.section_skills .skill_content .skills_list .item .counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+.section_skills .skill_content .skills_list .item .title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-transform: uppercase;
+}
+
+.section_works .work_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section_works .work_list .item {
+  margin: 1rem;
+}
+
+.section_works .work_list .item a {
+  width: 300px;
+  height: 200px;
+}
+
+.section_works .work_list .item a img {
+  width: 100%;
+}
+
+@-webkit-keyframes skill {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes skill {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes cardAni-light {
+  100% {
+    width: 200px;
+    height: 300px;
+    background: #f5f6f7;
+    -webkit-box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
+            box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
+  }
+}
+
+@keyframes cardAni-light {
+  100% {
+    width: 200px;
+    height: 300px;
+    background: #f5f6f7;
+    -webkit-box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
+            box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
+  }
+}
+
+@-webkit-keyframes cardAni-dark {
+  100% {
+    background: #131f24;
+    -webkit-box-shadow: 0 0 0 #fff, 0 0 0 #fff inset, 40px 40px 40px rgba(0, 0, 0, 0.541), 2px 2px 2px rgba(255, 255, 255, 0.226) inset;
+            box-shadow: 0 0 0 #fff, 0 0 0 #fff inset, 40px 40px 40px rgba(0, 0, 0, 0.541), 2px 2px 2px rgba(255, 255, 255, 0.226) inset;
+  }
+}
+
+@keyframes cardAni-dark {
+  100% {
+    background: #131f24;
+    -webkit-box-shadow: 0 0 0 #fff, 0 0 0 #fff inset, 40px 40px 40px rgba(0, 0, 0, 0.541), 2px 2px 2px rgba(255, 255, 255, 0.226) inset;
+            box-shadow: 0 0 0 #fff, 0 0 0 #fff inset, 40px 40px 40px rgba(0, 0, 0, 0.541), 2px 2px 2px rgba(255, 255, 255, 0.226) inset;
+  }
 }
 
 @-webkit-keyframes drop_down {
@@ -566,258 +838,5 @@ body {
   html {
     font-size: 14px;
   }
-}
-
-.tab_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.tab_header button {
-  color: #457b9d;
-  display: inline-block;
-  width: 100px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  margin: 20px;
-  border-radius: 20px;
-  background: #f5f6f7;
-  -webkit-box-shadow: 10px 10px 10px #ccc, 0 0 #fff, 0 0 0 #ccc inset, 1px 1px 1px #fff inset;
-          box-shadow: 10px 10px 10px #ccc, 0 0 #fff, 0 0 0 #ccc inset, 1px 1px 1px #fff inset;
-}
-
-.tab_header button.on {
-  background: #f0f0f0;
-  -webkit-box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px #ccc inset, -5px -5px 5px #fff inset;
-          box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px #ccc inset, -5px -5px 5px #fff inset;
-}
-
-.section_skills {
-  background: #f0f0f0;
-  color: #457b9d;
-}
-
-.skills_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.skills_list .item {
-  position: relative;
-}
-
-.skills_list .item .card {
-  margin: 1rem;
-  overflow: hidden;
-  position: relative;
-  -webkit-transition: -webkit-box-shadow 3s;
-  transition: -webkit-box-shadow 3s;
-  transition: box-shadow 3s;
-  transition: box-shadow 3s, -webkit-box-shadow 3s;
-  width: 200px;
-  height: 300px;
-  border-radius: 20px;
-  background: #f0f0f0;
-  -webkit-box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 10px 10px 10px #ccc inset, -10px -10px 10px #fff inset;
-          box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 10px 10px 10px #ccc inset, -10px -10px 10px #fff inset;
-}
-
-.skills_list .item .card.on {
-  -webkit-animation: cardAni-light 1s linear forwards;
-          animation: cardAni-light 1s linear forwards;
-}
-
-.skills_list .item .card.on .circle.html svg circle:nth-child(2) {
-  -webkit-transition: stroke-dashoffset 3s;
-  transition: stroke-dashoffset 3s;
-  stroke-dashoffset: calc(332px - 332px * 90 / 100);
-}
-
-.skills_list .item .card.on .circle.css svg circle:nth-child(2) {
-  -webkit-transition: stroke-dashoffset 3s;
-  transition: stroke-dashoffset 3s;
-  stroke-dashoffset: calc(332px - 332px * 89 / 100);
-}
-
-.skills_list .item .card.on .circle.jq svg circle:nth-child(2) {
-  -webkit-transition: stroke-dashoffset 3s;
-  transition: stroke-dashoffset 3s;
-  stroke-dashoffset: calc(332px - 332px * 80 / 100);
-}
-
-.skills_list .item .card.on .circle.js svg circle:nth-child(2) {
-  -webkit-transition: stroke-dashoffset 3s;
-  transition: stroke-dashoffset 3s;
-  stroke-dashoffset: calc(332px - 332px * 60 / 100);
-}
-
-.skills_list .item .card.on .circle.ap svg circle:nth-child(2) {
-  -webkit-transition: stroke-dashoffset 3s;
-  transition: stroke-dashoffset 3s;
-  stroke-dashoffset: calc(332px - 332px * 70 / 100);
-}
-
-.skills_list .item .card.on .circle.github svg circle:nth-child(2) {
-  -webkit-transition: stroke-dashoffset 3s;
-  transition: stroke-dashoffset 3s;
-  stroke-dashoffset: calc(332px - 332px * 85 / 100);
-}
-
-@-webkit-keyframes cardAni-light {
-  100% {
-    width: 200px;
-    height: 300px;
-    background: #f5f6f7;
-    -webkit-box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
-            box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
-  }
-}
-
-@keyframes cardAni-light {
-  100% {
-    width: 200px;
-    height: 300px;
-    background: #f5f6f7;
-    -webkit-box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
-            box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
-  }
-}
-
-.skills_list .item .circle {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-box-shadow: -4px -2px 4px 0px #fff, 4px 2px 6px 0px #dfe4ea;
-          box-shadow: -4px -2px 4px 0px #fff, 4px 2px 6px 0px #dfe4ea;
-}
-
-.skills_list .item .circle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: 2px 2px 2px 0px #dfe4ea inset, -2px -2px 2px 0px #fff inset;
-          box-shadow: 2px 2px 2px 0px #dfe4ea inset, -2px -2px 2px 0px #fff inset;
-}
-
-.skills_list .item .circle.html {
-  -webkit-transition: stroke-dashoffset 3s;
-  transition: stroke-dashoffset 3s;
-}
-
-.skills_list .item .circle.html svg circle:nth-child(2) {
-  stroke: #e55126;
-}
-
-.skills_list .item .circle.css svg circle:nth-child(2) {
-  stroke: #0c73b8;
-}
-
-.skills_list .item .circle.js svg circle:nth-child(2) {
-  stroke: #e5a228;
-}
-
-.skills_list .item .circle.jq svg circle:nth-child(2) {
-  stroke: #0769ad;
-}
-
-.skills_list .item .circle.ap svg circle:nth-child(2) {
-  stroke: #01d5f5;
-}
-
-.skills_list .item .circle.github svg circle:nth-child(2) {
-  stroke: #ff7800;
-}
-
-.skills_list .item .pie {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
-          transform: translate(-50%, -50%) rotate(-90deg);
-  width: 120px;
-  height: 120px;
-  position: relative;
-  border-radius: 50%;
-}
-
-.skills_list .item svg circle {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 14;
-  stroke-dasharray: 333px;
-  stroke-dashoffset: 0;
-}
-
-.skills_list .item svg circle:nth-child(2) {
-  stroke-dasharray: calc(332px * 0.9);
-  stroke-dashoffset: 250;
-  stroke: #457b9d;
-  stroke-linecap: round;
-}
-
-@-webkit-keyframes skill {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes skill {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-.skills_list .item .counter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-transform: uppercase;
-}
-
-.skills_list .item .title {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */
