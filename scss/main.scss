@@ -225,15 +225,27 @@ body {
 }
 
 .section_introduce {
+  justify-content: flex-start !important;
+  .title {
+    font-size: $font-medium;
+    margin: 10vh 0;
+    padding: 0 3vw;
+  }
   .wrap_about {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
     li {
-      width: 300px;
-      height: 300px;
-      background-color: $primary-color-light1;
+      padding-left: 2rem;
       margin: 10px;
+      position: relative;
+      span {
+        margin-right: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
   }
 }
@@ -422,6 +434,7 @@ body {
 .section_works {
   .work_list {
     display: flex;
+    flex-wrap: wrap;
     .item {
       margin: 1rem;
       a {
@@ -486,6 +499,54 @@ body {
     .item_list {
       .link {
         padding: $padding-small;
+      }
+    }
+  }
+  .section_skills {
+    background: #f0f0f0;
+    color: $text-color2;
+    .tab_header {
+      display: flex;
+      button {
+        color: $text-color2;
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 20px;
+        border-radius: 20px;
+        background: $white-3;
+        box-shadow: 10px 10px 10px $color-shadow, 0 0 $white,
+          0 0 0 $color-shadow inset, 1px 1px 1px $white inset;
+        &.on {
+          background: #f0f0f0;
+          box-shadow: 0 0 0 $color-shadow, 0 0 0 $white,
+            5px 5px 5px $color-shadow inset, -5px -5px 5px $white inset;
+        }
+      }
+    }
+    .skill_content {
+      .skills_list {
+        .item {
+          .card {
+            width: 175px;
+            height: 250px;
+          }
+          .circle {
+            top: 60%;
+            &::after {
+            }
+          }
+          .pie {
+          }
+          svg circle {
+          }
+          .counter {
+          }
+          .title {
+          }
+        }
       }
     }
   }

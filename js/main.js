@@ -49,35 +49,6 @@ let count = 0;
 setInterval(() => {
   ct.changeText(texts[++count % texts.length]);
 }, 2000);
-//
-// let links = document.querySelectorAll(".item_list li a");
-// links.forEach((link) => {
-//   link.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     let target = e.currentTarget;
-//     let idMoveTo = target.getAttribute("href");
-//     let tagetElement = document.querySelector(`${idMoveTo}`);
-//     tagetElement.scrollIntoView({
-//       behavior: "smooth",
-//       block: "end",
-//       inline: "nearest",
-//     });
-//     links.forEach((link) => link.classList.remove("on"));
-//     target.classList.add("on");
-//   });
-// });
-// headerdrop
-// window.onscroll = function () {
-//   let header = document.querySelector(".nav");
-//   let headerHeight = header.offsetHeight;
-//   let windowTop = window.scrollY;
-//   if (windowTop >= headerHeight) {
-//     header.classList.add("drop");
-//   } else {
-//     header.classList.remove("drop");
-//   }
-// };
-
 // scrollspy
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll(".nav .item_list .item a");
@@ -112,6 +83,7 @@ let cards = document.querySelectorAll(".card");
 for (let i = 0; i < cards.length; i++) {
   let count = 0;
   cards[i].addEventListener("click", function () {
+    cards[i].classList.remove("on");
     this.classList.toggle("on");
     let counter = this.children[1].children[1];
     let countNum = counter.getAttribute("data-num");
@@ -127,9 +99,6 @@ for (let i = 0; i < cards.length; i++) {
     }, 32);
   });
 }
-
-let circle = document.querySelector("circle");
-console.log(circle.getTotalLength());
 
 let btns = document.querySelectorAll(".tab_header .btn");
 btns.forEach((btn) => {
