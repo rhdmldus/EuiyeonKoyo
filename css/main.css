@@ -427,32 +427,29 @@ body {
   padding: 0 3vw;
 }
 
-.section_introduce .wrap_about {
+.section_introduce .about_content_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.section_introduce .wrap_about li {
-  padding-left: 2rem;
-  margin: 10px;
-  position: relative;
+.section_introduce .about_content_wrap .about_content {
+  width: 15vw;
+  margin: 1.5rem;
 }
 
-.section_introduce .wrap_about li span {
-  margin-right: 1rem;
-  position: absolute;
-  top: 0;
-  left: 0;
+.section_introduce .about_content_wrap .about_content .about_img {
+  width: 100%;
+  margin: auto;
+}
+
+.section_introduce .about_content_wrap .about_content .about_img img {
+  width: 100%;
+  height: 100%;
 }
 
 .section_skills {
