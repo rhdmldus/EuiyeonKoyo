@@ -19,6 +19,31 @@ body {
   color: $text-color-dark;
   font-family: $font-main;
 }
+.back_to_top{
+  position:fixed;
+  bottom:-2px;right:2.5rem;
+  // transform: $move-x-center;
+  z-index:10;
+  text-align: center;
+  display: none;
+  &:hover{
+    bottom:0px;
+  }
+  &.on{
+    display: block;
+    animation: back2TopBtn 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+    a{
+      display:inline-block;
+      width:50px;height:50px;line-height: 50px;
+      text-decoration: none;
+      background:$accent-color;
+      text-transform: uppercase;
+      color:$primary-color-dark1;
+      font-weight: bold;
+      border-radius: 30px 30px 0 0;
+    }
+}
 
 .hippo {
   position: absolute;
@@ -29,7 +54,7 @@ body {
   text-align: center;
   width: 8.125rem;
   height: 80px;
-  background: $text-color;
+  background: $text-color-light;
   color: $accent-color;
   line-height: 80px;
   border: 1px soild #fff;
@@ -63,7 +88,7 @@ body {
     border-radius: 35px;
     box-shadow: $shadow-nav-light-100;
     font-size: $font-small;
-    background: $white-e;
+    background: $dark-shadow-light;
 
     .theme_switch_input {
       opacity: 0;
@@ -102,6 +127,8 @@ body {
       box-shadow: $shadow-light-circle;
     }
     &.on {
+      background: $light-shadow-light;
+
       &::after {
         transform: translate(50px, -50%);
       }
@@ -121,6 +148,9 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    .switch_group{
+      display:none;
+    }
     .link {
       position: relative;
       display: inline-block;
@@ -254,6 +284,9 @@ body {
   color: $text-color2;
   .tab_header {
     display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin: 10px 0;
     button {
       color: $text-color2;
       display: inline-block;
@@ -261,7 +294,7 @@ body {
       height: 50px;
       text-align: center;
       line-height: 50px;
-      margin: 20px;
+      margin:10px;
       border-radius: 20px;
       background: $white-3;
       box-shadow: 10px 10px 10px $color-shadow, 0 0 $white,
@@ -280,6 +313,9 @@ body {
       justify-content: center;
       .item {
         position: relative;
+        display:flex;
+        align-items: center;
+        justify-content: center;
         .card {
           margin: 1rem;
           overflow: hidden;
@@ -332,6 +368,9 @@ body {
               }
             }
           }
+        }
+        .detail{
+          margin:3rem;
         }
         .circle {
           width: 75px;
@@ -453,8 +492,6 @@ body {
 }
 @keyframes cardAni-light {
   100% {
-    width: 200px;
-    height: 300px;
     background: $white-3;
     box-shadow: $shadow-card-light-100;
   }
@@ -471,6 +508,14 @@ body {
   }
   100% {
     top: 0;
+  }
+}
+@keyframes back2TopBtn {
+  0%{
+    bottom:-50px;
+  }
+  100%{
+    bottom:-2px;
   }
 }
 @keyframes letter-in {
@@ -505,24 +550,9 @@ body {
     background: #f0f0f0;
     color: $text-color2;
     .tab_header {
-      display: flex;
       button {
-        color: $text-color2;
-        display: inline-block;
-        width: 100px;
-        height: 50px;
-        text-align: center;
         line-height: 50px;
-        margin: 20px;
-        border-radius: 20px;
-        background: $white-3;
-        box-shadow: 10px 10px 10px $color-shadow, 0 0 $white,
-          0 0 0 $color-shadow inset, 1px 1px 1px $white inset;
-        &.on {
-          background: #f0f0f0;
-          box-shadow: 0 0 0 $color-shadow, 0 0 0 $white,
-            5px 5px 5px $color-shadow inset, -5px -5px 5px $white inset;
-        }
+        margin: 5px;
       }
     }
     .skill_content {
@@ -531,6 +561,10 @@ body {
           .card {
             width: 175px;
             height: 250px;
+            margin: 1rem 0;
+          }
+          .detail{
+            margin:1rem;
           }
           .circle {
             top: 60%;
@@ -568,8 +602,32 @@ body {
       flex-direction: column;
       background: $text-color-light;
       transition: left 0.5s;
+      .switch_group{
+        display:block;
+        position:absolute;
+        top:unset;
+        right:0;
+        bottom: 0;
+        left:unset;
+        transform: translate(0,0) scale(0.5);
+        &.on{
+          &::after{
+            background:$primary-color-dark2;
+          }
+        }
+      }
       .link {
         padding: $padding-small;
+        &.on,
+        &:hover {
+          transform: translateX(10px);
+          color: $accent-color;
+          i {
+            opacity: 1;
+            transition: all 0.5s;
+            top: 10px;
+          }
+        }
       }
       &.on {
         top: 0;

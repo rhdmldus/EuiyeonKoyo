@@ -23,7 +23,8 @@
 
     <script defer src="./js/main.js"></script>
   </head>
-  <body class="dark">
+  <body class="">
+    <div class="back_to_top"><a href="#main">top</a></div>
     <header class="nav">
       <div class="hippo">
         <i class="fas fa-hippo"></i>
@@ -54,6 +55,12 @@
             ><i class="fas fa-paper-plane"></i><span>contact</span></a
           >
         </li>
+        <div class="switch_group">
+          <div class="switch_label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
       </ul>
       <button type="button" class="bars">
         <i class="fas fa-bars"></i>
@@ -65,7 +72,7 @@
         </div>
       </div>
     </header>
-    <main class="main">
+    <main class="main" id="main">
       <section id="mainTitle" class="title_wrap">
         <div class="title_group">
           <h1 class="title">Euiyeon Ko</h1>
@@ -78,7 +85,7 @@
       </section>
       <!-- Additional required wrapper -->
       <section id="introduce" class="section_introduce">
-        <h1 class="title">고의연은 이런 퍼블리셔입니다.</h1>
+        <h1 class="title">고의연을 들이셔야합니다.</h1>
         <div class="about_content_wrap">
           <div class="about_content">
             <div class="about_img magnifier">
@@ -117,13 +124,18 @@
       <section id="skills" class="section_skills">
         <h1 class="title">what I can do</h1>
         <div class="tab_header">
-          <button type="button" data-tab="done" class="btn on">skills</button>
-          <button type="button" data-tab="doing" class="btn">learning</button>
+          <button type="button" data-tab="html" class="btn on">html</button>
+          <button type="button" data-tab="css" class="btn">css</button>
+          <button type="button" data-tab="js" class="btn">js</button>
+          <button type="button" data-tab="jquery" class="btn">jquery</button>
+          <button type="button" data-tab="photoshop" class="btn">photoshop</button>
+          <button type="button" data-tab="github" class="btn">github</button>
+          <button type="button" data-tab="scss" class="btn">scss/sass</button>
+          <button type="button" data-tab="react" class="btn">react</button>
         </div>
-        <div class="skill_content" data-tab="done">
-          <p>click to see how much I am comportable with these</p>
+        <div class="skill_content">
           <ul class="skills_list">
-            <li class="item">
+            <li class="item" data-tab="html">
               <div class="card">
                 <h1 class="title">html</h1>
                 <div class="circle html">
@@ -136,8 +148,15 @@
                   <div class="wrap_txt counter" data-num="90">0%</div>
                 </div>
               </div>
+              <div class="detail">
+                <ul>
+                  <li>이런거 저런거 합니다</li>
+                  <li>이런거 저런거 합니다</li>
+                  <li>이런거 저런거 합니다</li>
+                </ul>
+              </div>
             </li>
-            <li class="item">
+            <li class="item di_no" data-tab="css">
               <div class="card">
                 <h1 class="title">css</h1>
                 <div class="circle css">
@@ -151,7 +170,7 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="item di_no" data-tab="js">
               <div class="card">
                 <h1 class="title">js</h1>
                 <div class="circle js">
@@ -165,7 +184,7 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="item di_no" data-tab="jquery">
               <div class="card">
                 <h1 class="title">jquery</h1>
                 <div class="circle jq">
@@ -179,7 +198,7 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="item di_no" data-tab="photoshop">
               <div class="card">
                 <h1 class="title">photoshop</h1>
                 <div class="circle ap">
@@ -193,7 +212,7 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="item di_no" data-tab="github">
               <div class="card">
                 <h1 class="title">github</h1>
                 <div class="circle github">
@@ -207,15 +226,10 @@
                 </div>
               </div>
             </li>
-          </ul>
-        </div>
-        <div class="skill_content di_no" data-tab="doing">
-          <h3>친해지고 싶어서 알아가고있는 중입니다.</h3>
-          <ul class="skills_list">
-            <li class="item">
+            <li class="item di_no" data-tab="scss">
               <div class="card">
-                <h1 class="title">react</h1>
-                <div class="circle react">
+                <h1 class="title">scss/sass</h1>
+                <div class="circle scss/sass">
                   <div class="pie">
                     <svg>
                       <circle cx="60" cy="60" r="53"></circle>
@@ -226,10 +240,10 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="item di_no" data-tab="react">
               <div class="card">
-                <h1 class="title">scss/sass</h1>
-                <div class="circle scss/sass">
+                <h1 class="title">react</h1>
+                <div class="circle react">
                   <div class="pie">
                     <svg>
                       <circle cx="60" cy="60" r="53"></circle>
@@ -237,62 +251,6 @@
                     </svg>
                   </div>
                   <div class="counter" data-num="80">0%</div>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="card">
-                <h1 class="title">js</h1>
-                <div class="circle js">
-                  <div class="pie">
-                    <svg>
-                      <circle cx="60" cy="60" r="53"></circle>
-                      <circle cx="60" cy="60" r="53"></circle>
-                    </svg>
-                  </div>
-                  <div class="counter" data-num="60">0%</div>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="card">
-                <h1 class="title">js</h1>
-                <div class="circle js">
-                  <div class="pie">
-                    <svg>
-                      <circle cx="60" cy="60" r="53"></circle>
-                      <circle cx="60" cy="60" r="53"></circle>
-                    </svg>
-                  </div>
-                  <div class="counter" data-num="60">0%</div>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="card">
-                <h1 class="title">js</h1>
-                <div class="circle js">
-                  <div class="pie">
-                    <svg>
-                      <circle cx="60" cy="60" r="53"></circle>
-                      <circle cx="60" cy="60" r="53"></circle>
-                    </svg>
-                  </div>
-                  <div class="counter" data-num="60">0%</div>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <div class="card">
-                <h1 class="title">js</h1>
-                <div class="circle js">
-                  <div class="pie">
-                    <svg>
-                      <circle cx="60" cy="60" r="53"></circle>
-                      <circle cx="60" cy="60" r="53"></circle>
-                    </svg>
-                  </div>
-                  <div class="counter" data-num="60">0%</div>
                 </div>
               </div>
             </li>

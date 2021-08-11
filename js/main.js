@@ -56,10 +56,14 @@ window.onscroll = function () {
   let header = document.querySelector(".nav");
   let headerHeight = header.offsetHeight;
   let windowTop = window.scrollY;
+  let back2top = document.querySelector('.back_to_top');
   if (windowTop >= headerHeight) {
     header.classList.add("drop");
+    back2top.classList.add('on')
   } else {
     header.classList.remove("drop");
+    back2top.classList.remove('on')
+
   }
 
   sections.forEach((section) => {
@@ -79,55 +83,80 @@ window.onscroll = function () {
   });
 };
 
-let cards = document.querySelectorAll(".card");
-for (let i = 0; i < cards.length; i++) {
-  let count = 0;
-  cards[i].addEventListener("click", function () {
-    cards[i].classList.remove("on");
-    this.classList.toggle("on");
-    let counter = this.children[1].children[1];
-    let countNum = counter.getAttribute("data-num");
-    console.log(countNum);
 
-    setInterval(function () {
-      if (count == countNum) {
-        clearInterval(count);
-      } else {
-        count += 1;
-        counter.textContent = count + "%";
-      }
-    }, 32);
-  });
-}
+// let cards = document.querySelectorAll(".card");
+// for (let i = 0; i < cards.length; i++) {
+//   let count = 0;
+//   cards[i].addEventListener("click", function () {
+//     cards[i].classList.remove("on");
+//     this.classList.toggle("on");
+//     let counter = this.children[1].children[1];
+//     let countNum = counter.getAttribute("data-num");
+//     console.log(countNum);
+
+//     setInterval(function () {
+//       if (count == countNum) {
+//         clearInterval(count);
+//       } else {
+//         count += 1;
+//         counter.textContent = count + "%";
+//       }
+//     }, 32);
+//   });
+// }
 
 let btns = document.querySelectorAll(".tab_header .btn");
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    
     let target = e.currentTarget;
+    let dataTab = target.getAttribute("data-tab");
+    let content = document.querySelector("li[data-tab=" + dataTab + "]");
+    let containers = document.querySelectorAll(".skills_list .item");
+    let counter = content.childNodes[1].childNodes[3].childNodes[3];
+    let countNum = counter.getAttribute('data-num');
+    let count = 0;
+    setInterval(function () {
+            if (count == countNum) {
+              clearInterval(count);
+            } else {
+              count += 1;
+              counter.textContent = count + "%";
+            }
+          }, 32);
+    let thisCard = content.childNodes[1]
     btns.forEach((btn) => {
       btn.classList.remove("on");
     });
     target.classList.toggle("on");
-    let dataTab = target.getAttribute("data-tab");
-    console.log(dataTab);
-    let content = document.querySelector("div[data-tab=" + dataTab + "]");
-    let containers = document.querySelectorAll(".skill_content");
-    containers.forEach((container) => {
-      container.classList.add("di_no");
-    });
-    content.classList.remove("di_no");
+    containers.forEach(container => {
+      container.classList.add('di_no')
+      let card = content.childNodes[1]
+      card.classList.remove('on')
+      setTimeout(() => {
+        thisCard.classList.add('on')
+      })
+    })
+    content.classList.remove('di_no');
   });
 });
-
+// sideNavi controller
 let bar = document.querySelector(".bars");
 let nav = document.querySelector(".item_list");
 bar.addEventListener("click", (e) => {
   nav.classList.toggle("on");
 });
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('on')
+  })
+})
 // 다크모드스위치
-let switchGroup = document.querySelector(".switch_group");
+let switchGroup = document.querySelectorAll(".switch_group");
 let body = document.querySelector("body");
-switchGroup.addEventListener("click", (e) => {
-  body.classList.toggle("dark");
-  e.currentTarget.classList.toggle("on");
-});
+switchGroup.forEach( switchbtn => {
+  switchbtn.addEventListener("click", (e) => {
+    body.classList.toggle("dark");
+    e.currentTarget.classList.toggle("on");
+  });
+})

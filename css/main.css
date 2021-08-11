@@ -38,7 +38,6 @@ button {
 .dark .nav .switch_group {
   -webkit-box-shadow: 0 2px 4px 0 rgba(151, 145, 151, 0.1);
           box-shadow: 0 2px 4px 0 rgba(151, 145, 151, 0.1);
-  background: rgba(0, 0, 0, 0.541);
 }
 
 .dark .nav .switch_group .switch_label i {
@@ -49,6 +48,14 @@ button {
   background: #131f24;
   -webkit-box-shadow: -4px -2px 4px 0px rgba(255, 255, 255, 0.226), 4px 2px 6px 0px rgba(0, 0, 0, 0.541);
           box-shadow: -4px -2px 4px 0px rgba(255, 255, 255, 0.226), 4px 2px 6px 0px rgba(0, 0, 0, 0.541);
+}
+
+.dark .nav.drop {
+  background: #334d5c;
+}
+
+.dark .nav.drop .switch_group::after {
+  background: #334d5c;
 }
 
 .dark .nav .item_list .link {
@@ -77,7 +84,7 @@ button {
 
 @media screen and (max-width: 902px) {
   .dark .nav .item_list {
-    background: #171b1d;
+    background: #334d5c;
   }
   .dark .nav .item_list.on .link i {
     color: #5bccf6;
@@ -146,6 +153,38 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.back_to_top {
+  position: fixed;
+  bottom: -2px;
+  right: 2.5rem;
+  z-index: 10;
+  text-align: center;
+  display: none;
+}
+
+.back_to_top:hover {
+  bottom: 0px;
+}
+
+.back_to_top.on {
+  display: block;
+  -webkit-animation: back2TopBtn 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+          animation: back2TopBtn 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.back_to_top a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  background: #5bccf6;
+  text-transform: uppercase;
+  color: #131f24;
+  font-weight: bold;
+  border-radius: 30px 30px 0 0;
+}
+
 .hippo {
   position: absolute;
   top: 0;
@@ -198,7 +237,7 @@ body {
   -webkit-box-shadow: 0 2px 4px 0 rgba(151, 145, 151, 0.1);
           box-shadow: 0 2px 4px 0 rgba(151, 145, 151, 0.1);
   font-size: 1rem;
-  background: #eee;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .nav .switch_group .theme_switch_input {
@@ -250,6 +289,10 @@ body {
           box-shadow: -4px -2px 4px 0px #fff, 4px 2px 6px 0px #dfe4ea;
 }
 
+.nav .switch_group.on {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .nav .switch_group.on::after {
   -webkit-transform: translate(50px, -50%);
           transform: translate(50px, -50%);
@@ -273,6 +316,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.nav .item_list .switch_group {
+  display: none;
 }
 
 .nav .item_list .link {
@@ -461,6 +508,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
 }
 
 .section_skills .tab_header button {
@@ -470,7 +523,7 @@ body {
   height: 50px;
   text-align: center;
   line-height: 50px;
-  margin: 20px;
+  margin: 10px;
   border-radius: 20px;
   background: #f5f6f7;
   -webkit-box-shadow: 10px 10px 10px #ccc, 0 0 #fff, 0 0 0 #ccc inset, 1px 1px 1px #fff inset;
@@ -496,6 +549,15 @@ body {
 
 .section_skills .skill_content .skills_list .item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section_skills .skill_content .skills_list .item .card {
@@ -553,6 +615,10 @@ body {
   -webkit-transition: stroke-dashoffset 3s;
   transition: stroke-dashoffset 3s;
   stroke-dashoffset: calc(332px - 332px * 85 / 100);
+}
+
+.section_skills .skill_content .skills_list .item .detail {
+  margin: 3rem;
 }
 
 .section_skills .skill_content .skills_list .item .circle {
@@ -703,8 +769,6 @@ body {
 
 @-webkit-keyframes cardAni-light {
   100% {
-    width: 200px;
-    height: 300px;
     background: #f5f6f7;
     -webkit-box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
             box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
@@ -713,8 +777,6 @@ body {
 
 @keyframes cardAni-light {
   100% {
-    width: 200px;
-    height: 300px;
     background: #f5f6f7;
     -webkit-box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
             box-shadow: 40px 40px 40px #ccc, 0 0 0 #fff, 0 0 0 #ccc inset, 2px 2px 2px #fff inset;
@@ -752,6 +814,24 @@ body {
   }
   100% {
     top: 0;
+  }
+}
+
+@-webkit-keyframes back2TopBtn {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: -2px;
+  }
+}
+
+@keyframes back2TopBtn {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: -2px;
   }
 }
 
@@ -802,32 +882,17 @@ body {
     background: #f0f0f0;
     color: #457b9d;
   }
-  .section_skills .tab_header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .section_skills .tab_header button {
-    color: #457b9d;
-    display: inline-block;
-    width: 100px;
-    height: 50px;
-    text-align: center;
     line-height: 50px;
-    margin: 20px;
-    border-radius: 20px;
-    background: #f5f6f7;
-    -webkit-box-shadow: 10px 10px 10px #ccc, 0 0 #fff, 0 0 0 #ccc inset, 1px 1px 1px #fff inset;
-            box-shadow: 10px 10px 10px #ccc, 0 0 #fff, 0 0 0 #ccc inset, 1px 1px 1px #fff inset;
-  }
-  .section_skills .tab_header button.on {
-    background: #f0f0f0;
-    -webkit-box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px #ccc inset, -5px -5px 5px #fff inset;
-            box-shadow: 0 0 0 #ccc, 0 0 0 #fff, 5px 5px 5px #ccc inset, -5px -5px 5px #fff inset;
+    margin: 5px;
   }
   .section_skills .skill_content .skills_list .item .card {
     width: 175px;
     height: 250px;
+    margin: 1rem 0;
+  }
+  .section_skills .skill_content .skills_list .item .detail {
+    margin: 1rem;
   }
   .section_skills .skill_content .skills_list .item .circle {
     top: 60%;
@@ -858,8 +923,32 @@ body {
     -webkit-transition: left 0.5s;
     transition: left 0.5s;
   }
+  .nav .item_list .switch_group {
+    display: block;
+    position: absolute;
+    top: unset;
+    right: 0;
+    bottom: 0;
+    left: unset;
+    -webkit-transform: translate(0, 0) scale(0.5);
+            transform: translate(0, 0) scale(0.5);
+  }
+  .nav .item_list .switch_group.on::after {
+    background: #334d5c;
+  }
   .nav .item_list .link {
     padding: 30px 23px;
+  }
+  .nav .item_list .link.on, .nav .item_list .link:hover {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    color: #5bccf6;
+  }
+  .nav .item_list .link.on i, .nav .item_list .link:hover i {
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    top: 10px;
   }
   .nav .item_list.on {
     top: 0;

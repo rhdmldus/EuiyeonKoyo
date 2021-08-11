@@ -3,7 +3,7 @@
   color: $text-color-light;
   .hippo {
     background: $accent-color;
-    color: $text-color;
+    color: $text-color-light;
     border: 1px soild #fff;
   }
   .nav {
@@ -14,8 +14,6 @@
     }
     .switch_group {
       box-shadow: $shadow-nav-light-100;
-      background: $dark-shadow;
-
       .theme_switch_input {
       }
       .switch_label {
@@ -37,8 +35,14 @@
       }
     }
     &.drop {
+      background:$primary-color-dark2;
       .item_list {
         .link {
+        }
+      }
+      .switch_group{
+        &::after{
+          background:$primary-color-dark2;
         }
       }
     }

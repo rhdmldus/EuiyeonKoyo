@@ -1,10 +1,11 @@
 $primary-color-dark1: #131f24;
-$primary-color-dark2: #171b1d;
+$primary-color-dark2: #334d5c;
 $primary-color-light1: #ffffff;
 $primary-color-light2: #e2d4d4;
 $accent-color: #5bccf6;
-$text-color: #fcde67;
+// $text-color: #fcde67;
 $text-color-light: #fcde67;
+$dark-yellow: #c29b01;
 $text-color-dark: #131f24;
 $text-color2: #457b9d;
 $nav-color: #1c2a30;
@@ -15,6 +16,8 @@ $white-2: #dfe4ea;
 $white-3: #f5f6f7;
 $white-e: #eee;
 $color-shadow: #ccc;
+$dark-shadow-light: rgba(0, 0, 0, 0.1);
+$light-shadow-light: rgba(255, 255, 255, 0.2);
 $dark-shadow: rgba(0, 0, 0, 0.541);
 $light-shadow: rgba(255, 255, 255, 0.226);
 $font-weight: (
