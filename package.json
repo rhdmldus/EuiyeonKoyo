@@ -1,0 +1,25 @@
+{
+  "name": "scss_basic_base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "scripts": {
+    "build": "babel ./js/ -d ./js/lib/ -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhdmldus/EuiyeonKoyo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhdmldus/EuiyeonKoyo/issues"
+  },
+  "homepage": "https://github.com/rhdmldus/EuiyeonKoyo#readme"
+}
