@@ -314,6 +314,7 @@ body {
       .item {
         position: relative;
         display:flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         .card {
@@ -371,6 +372,16 @@ body {
         }
         .detail{
           margin:3rem;
+          width:36vw;
+          li{
+            position:relative;
+            margin:0.5rem 0;
+            padding-left:25px;
+              span{
+                position:absolute;
+                top:0;left:0;
+              }
+            }
         }
         .circle {
           width: 75px;
@@ -473,7 +484,9 @@ body {
   .work_list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     .item {
+      width:300px;
       margin: 1rem;
       a {
         width: 300px;
@@ -561,10 +574,9 @@ body {
           .card {
             width: 175px;
             height: 250px;
-            margin: 1rem 0;
+            margin: 1rem;
           }
           .detail{
-            margin:1rem;
           }
           .circle {
             top: 60%;
@@ -657,4 +669,85 @@ body {
   html {
     font-size: 14px;
   }
+}
+@media screen and (max-width: 530px) {
+  html {
+    font-size: 14px;
+  }
+  .section_introduce {
+    .title {
+    }
+    .about_content_wrap {
+      display: flex;
+      flex-direction: column;
+      .about_content {
+        width: 50vw;
+        display:inline-flex;
+        margin: 1.5rem;
+        .about_img {
+          flex-grow:1;
+          width: 100%;
+          margin: auto;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .wrap_about{
+          flex-grow:2;
+        }
+      }
+    }
+  }
+  .section_skills {
+    .tab_header {
+      button {
+      }
+    }
+    .skill_content {
+      .skills_list {
+        .item {
+          .card {
+            width: 175px;
+            height: 250px;
+            margin: 1rem;
+          }
+          .detail{
+            width:60vw;
+          }
+          .circle {
+            top: 60%;
+            &::after {
+            }
+          }
+          .pie {
+          }
+          svg circle {
+          }
+          .counter {
+          }
+          .title {
+          }
+        }
+      }
+    }
+  }
+}
+.icon_about {
+  background:url(../images/magnifier.png) no-repeat center center/contain;
+  width:30px;height:30px;
+  text-indent: -99999999px;
+  display:inline-block;
+}
+.icon_about.magnifier {
+  background-image:url(../images/magnifier.png);
+}
+.icon_about.chat {
+  background-image:url(../images/chat.png);
+}
+.icon_about.rocket {
+  background-image:url(../images/rocket.png);
+}
+em{
+  font-style:normal;
 }
