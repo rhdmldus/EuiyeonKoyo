@@ -35,14 +35,14 @@
       }
     }
     &.drop {
-      background:$primary-color-dark2;
+      background: $primary-color-dark2;
       .item_list {
         .link {
         }
       }
-      .switch_group{
-        &::after{
-          background:$primary-color-dark2;
+      .switch_group {
+        &::after {
+          background: $primary-color-dark2;
         }
       }
     }
@@ -91,6 +91,26 @@
       &.section_introduce {
         .wrap_about {
           li {
+          }
+        }
+      }
+    }
+  }
+  .section_introduce {
+    .title {
+    }
+    .about_content_wrap {
+      .about_content {
+        box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.5);
+        &:hover {
+          box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.9);
+        }
+        em {
+        }
+        .wrap_about {
+          li {
+            span {
+            }
           }
         }
       }
