@@ -9,6 +9,7 @@
     />
 
     <title>고의연의 포트폴리오</title>
+    <link rel="icon" href="./images/favicon-16x16.png">
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +27,7 @@
   </head>
   <body class="">
     <div class="back_to_top"><a href="#main">top</a></div>
-    <header class="nav">
+    <header class="nav drop">
       <div class="hippo">
         <i class="fas fa-hippo"></i>
       </div>
@@ -72,21 +73,28 @@
           <i class="fas fa-moon"></i>
         </div>
       </div>
+      <div class="background di_no"></div>
     </header>
     <main class="main" id="main">
       <section id="mainTitle" class="title_wrap">
         <div class="title_group">
-          <h1 class="title">Euiyeon Ko</h1>
+          <h1 class="title_main">Euiyeon Ko</h1>
           <div class="changing-title">
             <span>The</span>
-            <h1>Proactive</h1>
+            <div class="scene">
+              <div class="cube">
+                <h1 class="cube_face pro">Proactive</h1>
+                <h1 class="cube_face co">cooperative</h1>
+                <h1 class="cube_face cr">creative</h1>
+                <h1 class="cube_face inn">innovative</h1>
+              </div>
+            </div>
+            <p class="sub_title">web publisher</p>
           </div>
-          <p class="sub_title">web publisher</p>
         </div>
       </section>
-      <!-- Additional required wrapper -->
       <section id="introduce" class="section_introduce">
-        <h1 class="title">고의연을 들이셔야합니다.</h1>
+        <h1 class="title">about 고의연</h1>
         <div class="about_content_wrap">
           <div class="about_content">
             <em
@@ -112,14 +120,14 @@
                 <span>☝</span>팀원들과 소통하며 함께 일하는 것을 중요시
                 여깁니다.
               </li>
-              <li><span>✌</span>맡은 일에 애정을 가지고 책임을 다합니다.</li>
+              <li><span>✌</span>타부서와의 원활한 소통으로 함께 공동의 목표를 이루어나갑니다.</li>
             </ul>
           </div>
           <div class="about_content">
             <em><i class="icon_about rocket">로켓</i>성장하는 고의연</em>
             <ul class="wrap_about">
               <li>
-                <span>✌</span>발빠르게 변화하는 환경에 적응하기위해 수시로
+                <span>☝</span>발빠르게 변화하는 환경에 적응하기위해 수시로
                 공부합니다.
               </li>
               <li><span>✌</span>새로운 것을 배우는 것에 거부감이 없습니다.</li>
@@ -144,7 +152,7 @@
           <ul class="skills_list">
             <li class="item" data-tab="html">
               <div class="card on">
-                <h1 class="title">html</h1>
+                <h1 class="title_skill">html</h1>
                 <div class="circle html">
                   <div class="pie">
                     <svg>
@@ -170,7 +178,7 @@
             </li>
             <li class="item di_no" data-tab="css">
               <div class="card">
-                <h1 class="title">css</h1>
+                <h1 class="title_skill">css</h1>
                 <div class="circle css">
                   <div class="pie">
                     <svg>
@@ -197,7 +205,7 @@
             </li>
             <li class="item di_no" data-tab="js">
               <div class="card">
-                <h1 class="title">javascript</h1>
+                <h1 class="title_skill">javascript</h1>
                 <div class="circle js">
                   <div class="pie">
                     <svg>
@@ -230,7 +238,7 @@
             </li>
             <li class="item di_no" data-tab="github">
               <div class="card">
-                <h1 class="title">github</h1>
+                <h1 class="title_skill">github</h1>
                 <div class="circle github">
                   <div class="pie">
                     <svg>
@@ -255,7 +263,7 @@
             </li>
             <li class="item di_no" data-tab="photoshop">
               <div class="card">
-                <h1 class="title">photoshop</h1>
+                <h1 class="title_skill">photoshop</h1>
                 <div class="circle ap">
                   <div class="pie">
                     <svg>
@@ -281,8 +289,8 @@
             </li>
             <li class="item di_no" data-tab="scss">
               <div class="card">
-                <h1 class="title">scss/sass</h1>
-                <div class="circle scss/sass">
+                <h1 class="title_skill">scss/sass</h1>
+                <div class="circle scss">
                   <div class="pie">
                     <svg>
                       <circle cx="60" cy="60" r="53"></circle>
@@ -310,48 +318,64 @@
         </div>
       </section>
       <section id="works" class="section_works">
+        <h1 class="title">portfolio</h1>
         <ul class="work_list">
           <li class="item">
+            <div class="detail">
+              <i class="icon_work redesign">리디자인</i><span class="sub_title">리디자인</span>
+              <a href="https://rhdmldus.github.io/nokchawon/" target="_blank">
+                <h3 class="work_title">녹차원 리디자인 사이트</h3>
+              </a>
+              <div class="detail_info">
+                <p>기획 / 디자인 / 퍼블리싱</p>
+                <p class="p_bar">참여율 <progress value="100" max="100"></progress> 100% </p>
+              </div>
+              <span class="keyword">#html</span> 
+              <span class="keyword">#css</span> 
+              <span class="keyword">#jquery</span> 
+              <span class="keyword">#photoshop</span> 
+            </div>
             <a href="https://rhdmldus.github.io/nokchawon/" target="_blank"
               ><img src="./images/work1.png" alt="녹차원사이트"
             /></a>
-            <div class="detail">
-              <h3>녹차원 리디자인 사이트</h3>
-              <p>
-                기획 / 디자인 / 퍼블리싱
-                <br />
-                참여율 <progress value="100" max="100"></progress> 100% #html
-                #css #jquery #photoshop
-              </p>
-            </div>
           </li>
           <li class="item">
+            <div class="detail">
+              <i class="icon_work redesign">리디자인</i><span class="sub_title">리디자인</span>
+              <a href="https://rhdmldus.github.io/portFolio/" target="_blank">
+                <h3 class="work_title">서광승마클럽 리디자인 사이트</h3>
+              </a>
+              <div class="detail_info">
+                <p>기획 / 디자인 / 퍼블리싱</p>
+                <p class="p_bar">참여율 <progress value="100" max="100"></progress> 100% </p>
+              </div>
+              <span class="keyword">#html</span> 
+              <span class="keyword">#css</span> 
+              <span class="keyword">#jquery</span> 
+              <span class="keyword">#photoshop</span> 
+            </div>
             <a href="https://rhdmldus.github.io/portFolio/" target="_blank"
-              ><img src="./images/work2.png" alt="서광승마클럽"
+              ><img src="./images/work2.png" alt="서광승마클럽사이트"
             /></a>
-            <div class="detail">
-              <h3>서광승마클럽 리디자인 사이트</h3>
-              <p>
-                기획 / 디자인 / 퍼블리싱
-                <br />
-                참여율 <progress value="100" max="100"></progress> 100% #html
-                #css #jquery #photoshop
-              </p>
-            </div>
           </li>
           <li class="item">
-            <a href="https://rhdmldus.github.io/imoFilter/" target="_blank"
-              ><img src="./images/work3.png" alt="토이프로젝트"
-            /></a>
             <div class="detail">
-              <h3>이모티콘 필터</h3>
-              <p>
-                기획 / 디자인 / 퍼블리싱
-                <br />
-                참여율 <progress value="100" max="100"></progress> 100% #html
-                #css #vanilla javascript
-              </p>
+              <i class="icon_work toy">토이 프로젝트</i><span class="sub_title">토이 ㅍ..</span>
+              <a href="https://rhdmldus.github.io/imoFilter/" target="_blank">
+                <h3 class="work_title">이모티콘 필터</h3>
+              </a>
+              <div class="detail_info">
+                <p>기획 / 디자인 / 기능구현</p>
+                <p class="p_bar">참여율 <progress value="100" max="100"></progress> 100% </p>
+              </div>
+              <span class="keyword">#html</span> 
+              <span class="keyword">#css</span> 
+              <span class="keyword">#vanilla js</span> 
+              <span class="keyword">#toy project</span> 
             </div>
+            <a href="https://rhdmldus.github.io/imoFilter/" target="_blank"
+              ><img src="./images/work3.png" alt="이모티콘 필터"
+            /></a>
           </li>
         </ul>
       </section>

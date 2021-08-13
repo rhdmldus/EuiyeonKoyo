@@ -116,6 +116,39 @@
       }
     }
   }
+  .section_works {
+    .work_list {
+      .item {
+        box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.5);
+        &:hover{
+          box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.9);
+        }
+        .detail{
+          .sub_title{
+            background:$primary-color-dark2;
+            color:$white-3;
+          }
+          a{
+            color:$text-color-light;
+            .work_title{
+            }
+            &:hover{
+            }
+          }
+          .detail_info{
+  
+          }
+          .keyword{
+            color:#b1b1b1;
+          }
+        }
+        a {
+          img {
+          }
+        }
+      }
+    }
+  }
   @media screen and (max-width: 902px) {
     html {
     }

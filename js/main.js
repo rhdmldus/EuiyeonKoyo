@@ -6,57 +6,57 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     }
   };
 }
-class ChangingTitle {
-  constructor(x = null) {
-    this.node = x;
-    this.letterfy(this.node.querySelector("h1"));
-  }
-  letterfy(node) {
-    let text = node.innerText;
-    node.innerText = "";
-    node.classList.add("current");
-    for (let c in text) {
-      let span = document.createElement("span");
-      span.innerText = text[c];
-      span.classList.add("letter", "in");
-      span.style.animationDelay = `${c * 0.1}s`;
-      node.appendChild(span);
-    }
-  }
-  changeText(newText) {
-    let oldTitle = this.node.querySelector(".current");
-    let i = 0;
-    for (let letter of oldTitle.children) {
-      letter.style.animationDelay = `${i++ * 0.1}s`;
-      letter.classList.remove("in");
-      letter.classList.add("out");
-    }
-    oldTitle.classList.remove("current");
-    let newTitle = document.createElement("h1");
-    newTitle.classList.add("current");
-    for (let c in newText) {
-      let span = document.createElement("span");
-      span.innerText = newText[c];
-      span.classList.add("letter", "in");
-      span.style.animationDelay = `${c * 0.1 + 0.5}s`;
-      newTitle.appendChild(span);
-    }
-    this.node.appendChild(newTitle);
-    setTimeout(this.removeNode(oldTitle), 2000);
-  }
-  removeNode(x) {
-    return () => {
-      x.remove();
-    };
-  }
-}
+// class ChangingTitle {
+//   constructor(x = null) {
+//     this.node = x;
+//     this.letterfy(this.node.querySelector("h1"));
+//   }
+//   letterfy(node) {
+//     let text = node.innerText;
+//     node.innerText = "";
+//     node.classList.add("current");
+//     for (let c in text) {
+//       let span = document.createElement("span");
+//       span.innerText = text[c];
+//       span.classList.add("letter", "in");
+//       span.style.animationDelay = `${c * 0.1}s`;
+//       node.appendChild(span);
+//     }
+//   }
+//   changeText(newText) {
+//     let oldTitle = this.node.querySelector(".current");
+//     let i = 0;
+//     for (let letter of oldTitle.children) {
+//       letter.style.animationDelay = `${i++ * 0.1}s`;
+//       letter.classList.remove("in");
+//       letter.classList.add("out");
+//     }
+//     oldTitle.classList.remove("current");
+//     let newTitle = document.createElement("h1");
+//     newTitle.classList.add("current");
+//     for (let c in newText) {
+//       let span = document.createElement("span");
+//       span.innerText = newText[c];
+//       span.classList.add("letter", "in");
+//       span.style.animationDelay = `${c * 0.1 + 0.5}s`;
+//       newTitle.appendChild(span);
+//     }
+//     this.node.appendChild(newTitle);
+//     setTimeout(this.removeNode(oldTitle), 2000);
+//   }
+//   removeNode(x) {
+//     return () => {
+//       x.remove();
+//     };
+//   }
+// }
 
-let ct = new ChangingTitle(document.querySelector(".changing-title"));
-const texts = ["Creative", "Innovative", "flexible", "Passionate"];
-let count = 0;
-setInterval(() => {
-  ct.changeText(texts[++count % texts.length]);
-}, 2000);
+// let ct = new ChangingTitle(document.querySelector(".changing-title"));
+// const texts = ["Creative", "Innovative", "flexible", "Passionate"];
+// let count = 0;
+// setInterval(() => {
+//   ct.changeText(texts[++count % texts.length]);
+// }, 2000);
 // scrollspy
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll(".nav .item_list .item a");
@@ -89,27 +89,6 @@ window.onscroll = function () {
     }
   });
 };
-
-// let cards = document.querySelectorAll(".card");
-// for (let i = 0; i < cards.length; i++) {
-//   let count = 0;
-//   cards[i].addEventListener("click", function () {
-//     cards[i].classList.remove("on");
-//     this.classList.toggle("on");
-//     let counter = this.children[1].children[1];
-//     let countNum = counter.getAttribute("data-num");
-//     console.log(countNum);
-
-//     setInterval(function () {
-//       if (count == countNum) {
-//         clearInterval(count);
-//       } else {
-//         count += 1;
-//         counter.textContent = count + "%";
-//       }
-//     }, 32);
-//   });
-// }
 
 let btns = document.querySelectorAll(".tab_header .btn");
 btns.forEach((btn) => {
@@ -149,23 +128,24 @@ btns.forEach((btn) => {
 let bar = document.querySelector(".bars");
 let nav = document.querySelector(".item_list");
 let body = document.querySelector("body");
+let back = document.querySelector('.background');
 bar.addEventListener("click", (e) => {
   nav.classList.toggle("on");
+  back.classList.toggle('di_no');
 });
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("on");
+    back.classList.add('di_no');
   });
 });
-body.addEventListener("click", () => {
-  if (nav.classList.contains("on")) {
-    nav.classList.remove("on");
-  }
-});
+back.addEventListener('click', (e) => {
+  nav.classList.remove("on");
+  back.classList.add('di_no');
+})
 
 // 다크모드스위치
 let switchGroup = document.querySelectorAll(".switch_group");
-let body = document.querySelector("body");
 switchGroup.forEach((switchbtn) => {
   switchbtn.addEventListener("click", (e) => {
     body.classList.toggle("dark");

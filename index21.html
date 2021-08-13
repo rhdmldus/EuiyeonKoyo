@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, 
+maximum-scale=1.0, minimum-scale=1.0"
+/>
+
+<title>고의연의 포트폴리오</title>
+<link rel="icon" href="./images/favicon-16x16.png">
+<link rel="stylesheet" href="./css/main.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+    rel="stylesheet"
+/>
+<link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    rel="stylesheet"
+/>
+
+<!-- <script defer src="./js/main.js"></script> -->
+<!-- <script defer src="./js/lib/main.js"></script> -->
+</head>
+<style>
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(0,0,0,0.5);
+}
+.cube__face--front  { background: rgba(187, 37, 37, 0.5); transform: rotateY(  0deg) translateZ(100px); }
+.cube__face--right  { background: rgba(22, 253, 22, 0.5); transform: rotateY( 90deg) translateZ(100px); }
+.cube__face--back   { background: rgba(232, 255, 26, 0.5); transform: rotateY(180deg) translateZ(100px); }
+.cube__face--left   { background: rgba(1, 133, 194, 0.5); transform: rotateY(-90deg) translateZ(100px); }
+.cube__face--top    { background: rgba(212, 3, 219, 0.5); transform: rotateX( 90deg) translateZ(100px); }
+.cube__face--bottom { background: rgba(97, 96, 96, 0.5); transform: rotateX(-90deg) translateZ(100px); }
+
+.cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
+.cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-100px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+
+</style>
+<body class="">
+    <div class="scene">
+        <div class="cube">
+            <div class="cube__face cube__face--front">front</div>
+            <div class="cube__face cube__face--back">back</div>
+            <!-- <div class="cube__face cube__face--right">right</div> -->
+            <!-- <div class="cube__face cube__face--left">left</div> -->
+            <div class="cube__face cube__face--top">top</div>
+            <div class="cube__face cube__face--bottom">bottom</div>
+        </div>
+        </div>
+</body>
+</html>

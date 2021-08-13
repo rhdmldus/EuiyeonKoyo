@@ -1,0 +1,32 @@
+.icon_about {
+background: url(../images/magnifier.png) no-repeat center center/contain;
+width: 30px;
+height: 30px;
+text-indent: -99999999px;
+display: inline-block;
+margin-right: 10px;
+}
+.icon_about.magnifier {
+background-image: url(../images/magnifier.png);
+}
+.icon_about.chat {
+background-image: url(../images/chat.png);
+}
+.icon_about.rocket {
+background-image: url(../images/rocket.png);
+}
+.icon_work {
+background:url(../images/web_design.png) no-repeat center center/contain;
+width:36px;
+height:36px;
+text-indent:-9999px;
+display:inline-block;
+margin-right:10px;
+vertical-align: top;
+}
+.icon_work.redesign{
+background-image: url(../images/web_design.png)
+}
+.icon_work.toy{
+background-image: url(../images/code.png)
+}
