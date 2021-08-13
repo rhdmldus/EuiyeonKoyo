@@ -52,7 +52,7 @@ class ChangingTitle {
 }
 
 let ct = new ChangingTitle(document.querySelector(".changing-title"));
-const texts = ["Creative", "Innovative", "flexible", "Passionate"];
+const texts = ["Creative", "Innovative", "cooperative", "Passionate"];
 let count = 0;
 setInterval(() => {
   ct.changeText(texts[++count % texts.length]);
