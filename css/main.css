@@ -525,16 +525,24 @@ body {
 }
 
 .title_wrap .title_group div.changing-title {
-  width: 100%;
-  height: 14vh;
+  font-size: 8vw;
+  height: 1.2em;
   position: relative;
+  left: 50%;
+  width: 100%;
+  overflow-y: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .title_wrap .title_group div.changing-title h1 {
-  width: 100%;
-  height: 100%;
-  font-size: 5em;
+  font-size: 1em;
   position: absolute;
+  left: 19vw;
+  top: 0;
+  margin: 0;
 }
 
 .title_wrap .title_group div.changing-title h1 .letter {
@@ -1249,83 +1257,6 @@ body {
   }
   .section_skills .skill_content .skills_list .item .circle {
     top: 60%;
-  }
-}
-
-.scene {
-  width: 57vh;
-  height: 14vh;
-  -webkit-perspective: 600px;
-          perspective: 600px;
-  position: absolute;
-  top: 0;
-  left: 37px;
-}
-
-.cube {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-animation: rotateCube 9s linear infinite normal;
-          animation: rotateCube 9s linear infinite normal;
-}
-
-.cube_face {
-  position: absolute;
-  background: #fff;
-}
-
-.cube_face.pro {
-  -webkit-transform: rotateY(0deg) translateZ(7vh);
-          transform: rotateY(0deg) translateZ(7vh);
-}
-
-.cube_face.right {
-  -webkit-transform: rotateY(90deg) translateZ(100px);
-          transform: rotateY(90deg) translateZ(100px);
-}
-
-.cube_face.inn {
-  -webkit-transform: rotateX(180deg) translateZ(7vh);
-          transform: rotateX(180deg) translateZ(7vh);
-}
-
-.cube_face.left {
-  -webkit-transform: rotateY(-90deg) translateZ(100px);
-          transform: rotateY(-90deg) translateZ(100px);
-}
-
-.cube_face.co {
-  -webkit-transform: rotateX(90deg) rotateX(180deg) translateZ(7vh);
-          transform: rotateX(90deg) rotateX(180deg) translateZ(7vh);
-}
-
-.cube_face.cr {
-  -webkit-transform: rotateX(-90deg) rotateX(180deg) translateZ(7vh);
-          transform: rotateX(-90deg) rotateX(180deg) translateZ(7vh);
-}
-
-@-webkit-keyframes rotateCube {
-  0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-  100% {
-    -webkit-transform: rotateX(-360deg);
-            transform: rotateX(-360deg);
-  }
-}
-
-@keyframes rotateCube {
-  0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-  100% {
-    -webkit-transform: rotateX(-360deg);
-            transform: rotateX(-360deg);
   }
 }
 /*# sourceMappingURL=main.css.map */
